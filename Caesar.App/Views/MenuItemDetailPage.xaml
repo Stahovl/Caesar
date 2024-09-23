@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Caesar.App.Converters"
+             x:Class="Caesar.App.Views.MenuItemDetailPage"
+             Title="Menu Item Details">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DecimalConverter x:Key="DecimalConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20"
+                     Spacing="10">
+            <Entry Placeholder="Name"
+                   Text="{Binding Name}" />
+            <Editor Placeholder="Description"
+                    Text="{Binding Description}"
+                    HeightRequest="100" />
+            <Entry Placeholder="Price"
+                   Text="{Binding Price, Converter={StaticResource DecimalConverter}}"
+                   Keyboard="Numeric" />
+            <Entry Placeholder="Category"
+                   Text="{Binding Category}" />
+            <Entry Placeholder="Image URL"
+                   Text="{Binding ImageUrl}" />
+            <Image Source="{Binding ImageUrl}"
+                   HeightRequest="200"
+                   Aspect="AspectFit" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Spacing="20">
+                <Button Text="Save"
+                        Command="{Binding SaveCommand}" />
+                <Button Text="Cancel"
+                        Command="{Binding CancelCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -7,19 +7,29 @@ namespace Caesar.Mobile.ViewModels;
 public class MainViewModel : BaseViewModel
 {
     private readonly IApiService _apiService;
+    private readonly IAuthService _authService;
     public ObservableCollection<MenuItemDto> MenuItems { get; set; }
 
-    public MainViewModel(IApiService apiService)
+    public MainViewModel(IApiService apiService, IAuthService authService)
     {
         _apiService = apiService;
+        _authService = authService;
         MenuItems = new ObservableCollection<MenuItemDto>();
         LoadMenuItemsCommand = new Command(async () => await LoadMenuItems());
+        LogoutCommand = new Command(async () => await Logout());
     }
 
     public Command LoadMenuItemsCommand { get; }
+    public Command LogoutCommand { get; }
 
     private async Task LoadMenuItems()
     {
+        if (!_authService.IsAuthenticated)
+        {
+            await Shell.Current.GoToAsync("//LoginPage");
+            return;
+        }
+
         IsBusy = true;
 
         try
@@ -39,5 +49,11 @@ public class MainViewModel : BaseViewModel
         {
             IsBusy = false;
         }
+    }
+
+    private async Task Logout()
+    {
+        await _authService.ClearTokenAsync();
+        await Shell.Current.GoToAsync("//LoginPage");
     }
 }

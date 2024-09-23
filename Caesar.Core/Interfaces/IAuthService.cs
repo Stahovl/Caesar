@@ -4,9 +4,6 @@ namespace Caesar.Core.Interfaces;
 
 public interface IAuthService
 {
+    public Task<(bool IsSuccess, string Token)> LoginAsync(string username, string password);
     public string GenerateJwtToken(User user);
-
-    // Здесь могут быть дополнительные методы, например:
-    // Task<bool> ValidateUserAsync(string username, string password);
-    // Task<User> GetUserByUsernameAsync(string username);
 }

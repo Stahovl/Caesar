@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Caesar.App.Views.MainPage"
+             Title="Caesar Admin">
+    <Grid RowDefinitions="Auto,*,*,Auto">
+        <Button Grid.Row="0"
+                Text="Logout"
+                Command="{Binding LogoutCommand}"
+                HorizontalOptions="End"
+                Margin="10" />
+
+        <RefreshView Grid.Row="1"
+                     Command="{Binding LoadMenuItemsCommand}"
+                     IsRefreshing="{Binding IsBusy}">
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Menu Items"
+                           FontSize="Large"
+                           Margin="10" />
+                    <Button Text="Add Menu Item"
+                            Command="{Binding AddMenuItemCommand}"
+                            Margin="10" />
+                    <CollectionView ItemsSource="{Binding MenuItems}"
+                                    SelectionMode="Single"
+                                    SelectedItem="{Binding SelectedMenuItem}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImageUrl}"
+                                           WidthRequest="50"
+                                           HeightRequest="50"
+                                           Aspect="AspectFit" />
+                                    <StackLayout Grid.Column="1"
+                                                 Spacing="0">
+                                        <Label Text="{Binding Name}"
+                                               FontAttributes="Bold" />
+                                        <Label Text="{Binding Price, StringFormat='{0:C}'}" />
+                                        <Label Text="{Binding Category}"
+                                               FontSize="Small"
+                                               TextColor="Gray" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2"
+                                                 Orientation="Horizontal">
+                                        <Button Text="Edit"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditMenuItemCommand}"
+                                                CommandParameter="{Binding Id}" 
+                                                Margin="0,0,20,0"/>
+                                        <Button Text="Delete"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteMenuItemCommand}"
+                                                CommandParameter="{Binding Id}" />
+                                    </StackLayout>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+
+        <RefreshView Grid.Row="2"
+                     Command="{Binding LoadReservationsCommand}"
+                     IsRefreshing="{Binding IsBusy}">
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Reservations"
+                           FontSize="Large"
+                           Margin="10" />
+                    <CollectionView ItemsSource="{Binding Reservations}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="{Binding CustomerName}"
+                                               FontAttributes="Bold" />
+                                        <Label Text="{Binding Date, StringFormat='{0:d}'}" />
+                                        <Label Text="{Binding Time, StringFormat='{0:t}'}" />
+                                    </StackLayout>
+                                    <Label Grid.Column="1"
+                                           Text="{Binding NumberOfGuests, StringFormat='{0} guests'}"
+                                           VerticalOptions="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+
+        <StackLayout Grid.Row="3"
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Button Text="Refresh Menu"
+                    Command="{Binding LoadMenuItemsCommand}"
+                    Margin="10" />
+            <Button Text="Refresh Reservations"
+                    Command="{Binding LoadReservationsCommand}"
+                    Margin="10" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

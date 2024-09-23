@@ -6,6 +6,8 @@ namespace Caesar.Mobile.ViewModels;
 public class LoginViewModel : BaseViewModel
 {
     private readonly IApiService _apiService;
+    private readonly IAuthService _authService;
+
     private string _username;
     private string _password;
 
@@ -23,9 +25,10 @@ public class LoginViewModel : BaseViewModel
 
     public ICommand LoginCommand { get; }
 
-    public LoginViewModel(IApiService apiService)
+    public LoginViewModel(IApiService apiService, IAuthService authService)
     {
         _apiService = apiService;
+        _authService = authService;
         LoginCommand = new Command(OnLoginClicked);
     }
 
@@ -40,17 +43,20 @@ public class LoginViewModel : BaseViewModel
         IsBusy = true;
         try
         {
-            // Here you would typically call your API to authenticate
-            // For now, let's just check if the username is "admin" and password is "password"
-            if (Username == "admin" && Password == "password")
+            var loginResult = await _apiService.LoginAsync(Username, Password);
+            if (loginResult.IsSuccess)
             {
-                // Navigate to the main page
+                await _authService.SetTokenAsync(loginResult.Token);
                 await Shell.Current.GoToAsync("//MainPage");
             }
             else
             {
                 await Shell.Current.DisplayAlert("Error", "Invalid username or password", "OK");
             }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
         }
         finally
         {

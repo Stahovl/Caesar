@@ -1,6 +1,7 @@
 ﻿using Caesar.Core.DTOs;
 using Caesar.Core.Entities;
 using Caesar.Core.Interfaces;
+using System.Text.Json;
 
 namespace Caesar.Core.Services;
 
@@ -27,8 +28,15 @@ public class MenuItemService : IMenuItemService
 
     public async Task<MenuItemDto> CreateMenuItemAsync(MenuItemDto menuItemDto)
     {
-        var menuItem = MapToEntity(menuItemDto);
+      /*  var menuItem = MapToEntity(menuItemDto);
         var createdMenuItem = await _repository.AddAsync(menuItem);
+        return MapToDto(createdMenuItem);*/
+
+        Console.WriteLine($"Creating MenuItem: {JsonSerializer.Serialize(menuItemDto)}");
+        var menuItem = MapToEntity(menuItemDto);
+        Console.WriteLine($"Mapped MenuItem: {JsonSerializer.Serialize(menuItem)}");
+        var createdMenuItem = await _repository.AddAsync(menuItem);
+        Console.WriteLine($"Created MenuItem: {JsonSerializer.Serialize(createdMenuItem)}");
         return MapToDto(createdMenuItem);
     }
 
@@ -51,7 +59,8 @@ public class MenuItemService : IMenuItemService
             Name = menuItem.Name,
             Description = menuItem.Description,
             Price = menuItem.Price,
-            Category = menuItem.Category
+            Category = menuItem.Category,
+            ImageUrl = menuItem.ImageUrl
         };
     }
 
@@ -63,7 +72,8 @@ public class MenuItemService : IMenuItemService
             Name = menuItemDto.Name,
             Description = menuItemDto.Description,
             Price = menuItemDto.Price,
-            Category = menuItemDto.Category
+            Category = menuItemDto.Category,
+            ImageUrl = menuItemDto.ImageUrl
         };
     }
 }

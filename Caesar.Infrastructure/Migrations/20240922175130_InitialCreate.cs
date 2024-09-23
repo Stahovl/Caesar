@@ -43,6 +43,26 @@ namespace Caesar.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Reservations", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "PasswordHash", "Role", "Username" },
+                values: new object[] { 1, "$2a$11$Zzt8uz/AvGKXjfH6og/c/esBMIUB3zhNS2nJ/D5GTyer3rf8cclZu", "Admin", "admin" });
         }
 
         /// <inheritdoc />
@@ -53,6 +73,9 @@ namespace Caesar.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Reservations");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

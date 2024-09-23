@@ -33,6 +33,8 @@ public class GlobalExceptionHandler : IExceptionFilter
         {
             statusCode = HttpStatusCode.InternalServerError;
             message = "An unexpected error occurred";
+            _logger.LogError(context.Exception, $"Exception occurred in {context.ActionDescriptor.DisplayName}: {context.Exception.Message}");
+
         }
 
         _logger.LogError(context.Exception, message);

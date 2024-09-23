@@ -9,19 +9,36 @@ namespace Caesar.API.Controllers;
 public class AuthController: ControllerBase
 {
     private readonly IAuthService _authService;
+    private readonly ILogger<AuthController> _logger;
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService, ILogger<AuthController> logger)
     {
         _authService = authService;
+        _logger = logger;
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginModel model)
+    public async Task<IActionResult> Login([FromBody] LoginModel model)
     {
-        // Здесь должна быть проверка учетных данных
-        var user = new User { Username = model.Username, Role = "User" };
-        var token = _authService.GenerateJwtToken(user);
-        return Ok(new { token });
+        _logger.LogInformation($"Login attempt for user: {model.Username}");
+
+        try
+        {
+            var result = await _authService.LoginAsync(model.Username, model.Password);
+            if (result.IsSuccess)
+            {
+                _logger.LogInformation($"Login successful for user: {model.Username}");
+                return Ok(new { token = result.Token });
+            }
+
+            _logger.LogWarning($"Login failed for user: {model.Username}");
+            return Unauthorized(new { message = "Invalid username or password" });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"An error occurred during login for user: {model.Username}");
+            return StatusCode(500, new { message = "An error occurred during login" });
+        }
     }
 }
 

@@ -2,6 +2,7 @@
 using Caesar.Core.Interfaces;
 using Caesar.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Caesar.Infrastructure.Repositories;
 
@@ -26,8 +27,10 @@ public class MenuItemRepository : IMenuItemRepository
 
     public async Task<MenuItem> AddAsync(MenuItem menuItem)
     {
+        Console.WriteLine($"Adding MenuItem: {JsonSerializer.Serialize(menuItem)}");
         await _context.MenuItems.AddAsync(menuItem);
         await _context.SaveChangesAsync();
+        Console.WriteLine($"MenuItem after save: {JsonSerializer.Serialize(menuItem)}");
         return menuItem;
     }
 

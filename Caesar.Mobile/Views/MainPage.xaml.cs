@@ -5,9 +5,9 @@ namespace Caesar.Mobile.Views;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage(IApiService apiService)
+	public MainPage(IApiService apiService, IAuthService authService)
 	{
         InitializeComponent();
-		BindingContext = new MainViewModel(apiService);
+		BindingContext = new MainViewModel(apiService, authService);
 	}
 }

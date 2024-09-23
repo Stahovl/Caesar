@@ -18,6 +18,7 @@ namespace Caesar.Mobile
                 });
 
             builder.Services.AddSingleton<IApiService, ApiService>();
+            builder.Services.AddSingleton<IAuthService, AuthService>();
 
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<MainViewModel>();

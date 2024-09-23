@@ -1,4 +1,5 @@
-﻿using Caesar.Mobile.Services;
+﻿using Caesar.Core.DTOs;
+using Caesar.Mobile.Services;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -8,9 +9,21 @@ public class MenuItemViewModel : INotifyPropertyChanged
 {
     private readonly IApiService _apiService;
 
+    private int _id;
     private string _name;
     private string _description;
     private decimal _price;
+    private string _category;
+
+    public int Id
+    {
+        get => _id;
+        set
+        {
+            _id = value;
+            OnPropertyChanged(nameof(Id));
+        }
+    }
 
     public string Name
     {
@@ -42,6 +55,16 @@ public class MenuItemViewModel : INotifyPropertyChanged
         }
     }
 
+    public string Category
+    {
+        get => _category;
+        set
+        {
+            _category = value;
+            OnPropertyChanged(nameof(Category));
+        }
+    }
+
     public ICommand SaveCommand { get; }
 
     public MenuItemViewModel(IApiService apiService)
@@ -52,8 +75,38 @@ public class MenuItemViewModel : INotifyPropertyChanged
 
     private async Task SaveMenuItem()
     {
-        // Здесь будет логика сохранения пункта меню через API
-        await _apiService.SaveMenuItemAsync(this);
+        try
+        {
+            var menuItemDto = ToDto();
+            var result = await _apiService.SaveMenuItemAsync(menuItemDto);
+            if (result)
+            {
+                // Обработка успешного сохранения
+                await Shell.Current.DisplayAlert("Success", "Menu item saved successfully", "OK");
+            }
+            else
+            {
+                // Обработка неудачного сохранения
+                await Shell.Current.DisplayAlert("Error", "Failed to save menu item", "OK");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Обработка исключений
+            await Shell.Current.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+        }
+    }
+
+    private MenuItemDto ToDto()
+    {
+        return new MenuItemDto
+        {
+            Id = this.Id,
+            Name = this.Name,
+            Description = this.Description,
+            Price = this.Price,
+            Category = this.Category
+        };
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
