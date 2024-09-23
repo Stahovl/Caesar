@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Caesar.Core\Caesar.Core.csproj" />
+    <ProjectReference Include="..\Caesar.Infrastructure\Caesar.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

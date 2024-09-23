@@ -66,7 +66,7 @@ public class MenuItemDetailViewModel : BaseViewModel
         CancelCommand = new Command(async () =>
         {
             Debug.WriteLine("Click cancel btn");
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("//MainPage");
         });
     }
 
@@ -116,7 +116,7 @@ public class MenuItemDetailViewModel : BaseViewModel
             if (result)
             {
                 await Shell.Current.DisplayAlert("Success", "Menu item saved successfully", "OK");
-                await Shell.Current.GoToAsync("..");
+                await Shell.Current.GoToAsync("//MainPage");
             }
             else
             {
