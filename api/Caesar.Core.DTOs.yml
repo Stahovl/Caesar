@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Core.DTOs
+  commentId: N:Caesar.Core.DTOs
+  id: Caesar.Core.DTOs
+  children:
+  - Caesar.Core.DTOs.MenuItemDto
+  - Caesar.Core.DTOs.ReservationDto
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Core.DTOs
+  nameWithType: Caesar.Core.DTOs
+  fullName: Caesar.Core.DTOs
+  type: Namespace
+  assemblies:
+  - Caesar.Core
+references:
+- uid: Caesar.Core.DTOs.MenuItemDto
+  commentId: T:Caesar.Core.DTOs.MenuItemDto
+  parent: Caesar.Core.DTOs
+  href: Caesar.Core.DTOs.MenuItemDto.html
+  name: MenuItemDto
+  nameWithType: MenuItemDto
+  fullName: Caesar.Core.DTOs.MenuItemDto
+- uid: Caesar.Core.DTOs.ReservationDto
+  commentId: T:Caesar.Core.DTOs.ReservationDto
+  parent: Caesar.Core.DTOs
+  href: Caesar.Core.DTOs.ReservationDto.html
+  name: ReservationDto
+  nameWithType: ReservationDto
+  fullName: Caesar.Core.DTOs.ReservationDto
+- uid: Caesar.Core.DTOs
+  commentId: N:Caesar.Core.DTOs
+  href: Caesar.html
+  name: Caesar.Core.DTOs
+  nameWithType: Caesar.Core.DTOs
+  fullName: Caesar.Core.DTOs
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.DTOs
+    name: DTOs
+    href: Caesar.Core.DTOs.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.DTOs
+    name: DTOs
+    href: Caesar.Core.DTOs.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.App.Models
+  commentId: N:Caesar.App.Models
+  id: Caesar.App.Models
+  children:
+  - Caesar.App.Models.LoginResult
+  langs:
+  - csharp
+  - vb
+  name: Caesar.App.Models
+  nameWithType: Caesar.App.Models
+  fullName: Caesar.App.Models
+  type: Namespace
+  assemblies:
+  - Caesar.App
+references:
+- uid: Caesar.App.Models.LoginResult
+  commentId: T:Caesar.App.Models.LoginResult
+  href: Caesar.App.Models.LoginResult.html
+  name: LoginResult
+  nameWithType: LoginResult
+  fullName: Caesar.App.Models.LoginResult

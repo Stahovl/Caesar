@@ -21,7 +21,6 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
@@ -56,7 +55,7 @@ public class Program
 
         builder.Services.AddInfrastructureServices(builder.Configuration);
 
-        // Register application services
+        // Register services
         builder.Services.AddScoped<IReservationService, ReservationService>();
         builder.Services.AddScoped<IMenuItemService, MenuItemService>();
         builder.Services.AddScoped<IAuthService, AuthService>();

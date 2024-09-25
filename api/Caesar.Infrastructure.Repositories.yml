@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Infrastructure.Repositories
+  commentId: N:Caesar.Infrastructure.Repositories
+  id: Caesar.Infrastructure.Repositories
+  children:
+  - Caesar.Infrastructure.Repositories.MenuItemRepository
+  - Caesar.Infrastructure.Repositories.ReservationRepository
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Infrastructure.Repositories
+  nameWithType: Caesar.Infrastructure.Repositories
+  fullName: Caesar.Infrastructure.Repositories
+  type: Namespace
+  assemblies:
+  - Caesar.Infrastructure
+references:
+- uid: Caesar.Infrastructure.Repositories.MenuItemRepository
+  commentId: T:Caesar.Infrastructure.Repositories.MenuItemRepository
+  href: Caesar.Infrastructure.Repositories.MenuItemRepository.html
+  name: MenuItemRepository
+  nameWithType: MenuItemRepository
+  fullName: Caesar.Infrastructure.Repositories.MenuItemRepository
+- uid: Caesar.Infrastructure.Repositories.ReservationRepository
+  commentId: T:Caesar.Infrastructure.Repositories.ReservationRepository
+  href: Caesar.Infrastructure.Repositories.ReservationRepository.html
+  name: ReservationRepository
+  nameWithType: ReservationRepository
+  fullName: Caesar.Infrastructure.Repositories.ReservationRepository

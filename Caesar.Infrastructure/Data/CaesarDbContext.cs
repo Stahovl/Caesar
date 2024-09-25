@@ -23,13 +23,13 @@ public class CaesarDbContext : DbContext
             .Property(m => m.ImageUrl)
             .HasMaxLength(500)
             .IsRequired(false);
-        // Seed admin user
+
         modelBuilder.Entity<User>().HasData(
             new User
             {
                 Id = 1,
                 Username = "admin",
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"), // В реальном приложении используйте более сложный пароль
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
                 Role = "Admin"
             }
         );

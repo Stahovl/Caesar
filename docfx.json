@@ -1,0 +1,47 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+           "Caesar.API/Caesar.API.csproj",
+            "Caesar.App/Caesar.App.csproj",
+            "Caesar.Core/Caesar.Core.csproj",
+            "Caesar.Infrastructure/Caesar.Infrastructure.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "docfx docfx.json --serve",
+      "_appTitle": "docfx docfx.json --serve",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

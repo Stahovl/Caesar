@@ -58,7 +58,7 @@ public class AuthService : IAuthService
         return BCrypt.Net.BCrypt.Verify(password, storedHash);
     }
 
-    // Эти методы не используются в серверной реализации, но оставлены для соответствия интерфейсу
+    // Эти методы не используются в серверной реализации, но оставлены для реализации интерфейса
     public Task<string> GetTokenAsync() => throw new NotImplementedException();
     public Task SetTokenAsync(string token) => throw new NotImplementedException();
     public Task ClearTokenAsync() => throw new NotImplementedException();

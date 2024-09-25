@@ -1,0 +1,745 @@
+{
+  "source_base_path": "D:/GitRepos/Caesar",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Caesar.Web/wwwroot/lib/jquery-validation/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "Caesar.Web/wwwroot/lib/jquery-validation/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Controllers.AuthController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Controllers.LoginModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Controllers.LoginModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Controllers.MenuItemsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Controllers.MenuItemsController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Controllers.ReservationsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Controllers.ReservationsController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Middleware.GlobalExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Middleware.GlobalExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Middleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Validators.MenuItemDtoValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Validators.MenuItemDtoValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Validators.ReservationDtoValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Validators.ReservationDtoValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.Validators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.App.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.AppShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.AppShell.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Converters.DecimalConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Converters.DecimalConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.MauiProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.MauiProgram.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Models.LoginResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Models.LoginResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Services.ApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Services.ApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Services.IApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Services.IApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Services.ITokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Services.ITokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Services.TokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Services.TokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.BaseViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.BaseViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.LoginViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.LoginViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.MainViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.MainViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.MenuItemDetailViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.MenuItemDetailViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.MenuItemViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.MenuItemViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.ViewModels.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Views.LoginPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Views.LoginPage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Views.MainPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Views.MainPage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Views.MenuItemDetailPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Views.MenuItemDetailPage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.Views.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.WinUI.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.WinUI.App.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.WinUI.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.WinUI.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.WinUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.WinUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.App.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.DTOs.MenuItemDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.DTOs.MenuItemDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.DTOs.ReservationDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.DTOs.ReservationDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.DTOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.DTOs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Entities.MenuItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Entities.MenuItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Entities.Reservation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Entities.Reservation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Entities.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Entities.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.IAuthService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.IAuthService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.IMenuItemRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.IMenuItemRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.IMenuItemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.IMenuItemService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.IReservationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.IReservationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.IReservationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.IReservationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Services.MenuItemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Services.MenuItemService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Services.ReservationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Services.ReservationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Core.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Core.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Data.CaesarDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Data.CaesarDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.InfrastructureServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.InfrastructureServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Migrations.AllowNullImageUrl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Migrations.AllowNullImageUrl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Migrations.InitialCreate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Repositories.MenuItemRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Repositories.MenuItemRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Repositories.ReservationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Repositories.ReservationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Repositories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Services.AuthService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Services.AuthService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Caesar.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Caesar.Infrastructure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

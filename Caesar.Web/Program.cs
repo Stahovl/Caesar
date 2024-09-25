@@ -1,4 +1,7 @@
+using Caesar.Core.Interfaces;
+using Caesar.Core.Services;
 using Caesar.Infrastructure.Data;
+using Caesar.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,11 +16,12 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
-        // Добавляем контекст базы данных
+        builder.Services.AddScoped<IMenuItemService, MenuItemService>();
+        builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-        // Настройка аутентификации
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
