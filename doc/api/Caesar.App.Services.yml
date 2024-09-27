@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.App.Services
+  commentId: N:Caesar.App.Services
+  id: Caesar.App.Services
+  children:
+  - Caesar.App.Services.ApiService
+  - Caesar.App.Services.IApiService
+  - Caesar.App.Services.ITokenService
+  - Caesar.App.Services.TokenService
+  langs:
+  - csharp
+  - vb
+  name: Caesar.App.Services
+  nameWithType: Caesar.App.Services
+  fullName: Caesar.App.Services
+  type: Namespace
+  assemblies:
+  - Caesar.App
+references:
+- uid: Caesar.App.Services.ApiService
+  commentId: T:Caesar.App.Services.ApiService
+  href: Caesar.App.Services.ApiService.html
+  name: ApiService
+  nameWithType: ApiService
+  fullName: Caesar.App.Services.ApiService
+- uid: Caesar.App.Services.IApiService
+  commentId: T:Caesar.App.Services.IApiService
+  parent: Caesar.App.Services
+  href: Caesar.App.Services.IApiService.html
+  name: IApiService
+  nameWithType: IApiService
+  fullName: Caesar.App.Services.IApiService
+- uid: Caesar.App.Services.ITokenService
+  commentId: T:Caesar.App.Services.ITokenService
+  parent: Caesar.App.Services
+  href: Caesar.App.Services.ITokenService.html
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Caesar.App.Services.ITokenService
+- uid: Caesar.App.Services.TokenService
+  commentId: T:Caesar.App.Services.TokenService
+  href: Caesar.App.Services.TokenService.html
+  name: TokenService
+  nameWithType: TokenService
+  fullName: Caesar.App.Services.TokenService
+- uid: Caesar.App.Services
+  commentId: N:Caesar.App.Services
+  href: Caesar.html
+  name: Caesar.App.Services
+  nameWithType: Caesar.App.Services
+  fullName: Caesar.App.Services
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.Services
+    name: Services
+    href: Caesar.App.Services.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.Services
+    name: Services
+    href: Caesar.App.Services.html

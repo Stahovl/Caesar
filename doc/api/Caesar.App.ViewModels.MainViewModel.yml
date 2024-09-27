@@ -1,0 +1,1210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.App.ViewModels.MainViewModel
+  commentId: T:Caesar.App.ViewModels.MainViewModel
+  id: MainViewModel
+  parent: Caesar.App.ViewModels
+  children:
+  - Caesar.App.ViewModels.MainViewModel.#ctor(Caesar.App.Services.IApiService,Caesar.App.Services.ITokenService)
+  - Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+  - Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+  - Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+  - Caesar.App.ViewModels.MainViewModel.LoadData
+  - Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+  - Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+  - Caesar.App.ViewModels.MainViewModel.LogoutCommand
+  - Caesar.App.ViewModels.MainViewModel.MenuItems
+  - Caesar.App.ViewModels.MainViewModel.Reservations
+  - Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+  langs:
+  - csharp
+  - vb
+  name: MainViewModel
+  nameWithType: MainViewModel
+  fullName: Caesar.App.ViewModels.MainViewModel
+  type: Class
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: MainViewModel
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 9
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: 'public class MainViewModel : BaseViewModel, INotifyPropertyChanged'
+    content.vb: Public Class MainViewModel Inherits BaseViewModel Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - Caesar.App.ViewModels.BaseViewModel
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - Caesar.App.ViewModels.BaseViewModel.IsBusy
+  - Caesar.App.ViewModels.BaseViewModel.PropertyChanged
+  - Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  - Caesar.App.ViewModels.BaseViewModel.SetProperty``1({T}@,{T},System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Caesar.App.ViewModels.MainViewModel.MenuItems
+  commentId: P:Caesar.App.ViewModels.MainViewModel.MenuItems
+  id: MenuItems
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: MenuItems
+  nameWithType: MainViewModel.MenuItems
+  fullName: Caesar.App.ViewModels.MainViewModel.MenuItems
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: MenuItems
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 14
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ObservableCollection<MenuItemDto> MenuItems { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.MenuItemDto}
+    content.vb: Public Property MenuItems As ObservableCollection(Of MenuItemDto)
+  overload: Caesar.App.ViewModels.MainViewModel.MenuItems*
+- uid: Caesar.App.ViewModels.MainViewModel.Reservations
+  commentId: P:Caesar.App.ViewModels.MainViewModel.Reservations
+  id: Reservations
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: Reservations
+  nameWithType: MainViewModel.Reservations
+  fullName: Caesar.App.ViewModels.MainViewModel.Reservations
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: Reservations
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 15
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ObservableCollection<ReservationDto> Reservations { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.ReservationDto}
+    content.vb: Public Property Reservations As ObservableCollection(Of ReservationDto)
+  overload: Caesar.App.ViewModels.MainViewModel.Reservations*
+- uid: Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+  commentId: P:Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+  id: SelectedMenuItem
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: SelectedMenuItem
+  nameWithType: MainViewModel.SelectedMenuItem
+  fullName: Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: SelectedMenuItem
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 18
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public MenuItemDto SelectedMenuItem { get; set; }
+    parameters: []
+    return:
+      type: Caesar.Core.DTOs.MenuItemDto
+    content.vb: Public Property SelectedMenuItem As MenuItemDto
+  overload: Caesar.App.ViewModels.MainViewModel.SelectedMenuItem*
+- uid: Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+  id: LoadMenuItemsCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoadMenuItemsCommand
+  nameWithType: MainViewModel.LoadMenuItemsCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: LoadMenuItemsCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 24
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand LoadMenuItemsCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property LoadMenuItemsCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+  id: LoadReservationsCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoadReservationsCommand
+  nameWithType: MainViewModel.LoadReservationsCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: LoadReservationsCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 25
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand LoadReservationsCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property LoadReservationsCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+  id: AddMenuItemCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: AddMenuItemCommand
+  nameWithType: MainViewModel.AddMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: AddMenuItemCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 26
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand AddMenuItemCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property AddMenuItemCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+  id: EditMenuItemCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: EditMenuItemCommand
+  nameWithType: MainViewModel.EditMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: EditMenuItemCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 27
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand EditMenuItemCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property EditMenuItemCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+  id: DeleteMenuItemCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: DeleteMenuItemCommand
+  nameWithType: MainViewModel.DeleteMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: DeleteMenuItemCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 28
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand DeleteMenuItemCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property DeleteMenuItemCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.LogoutCommand
+  commentId: P:Caesar.App.ViewModels.MainViewModel.LogoutCommand
+  id: LogoutCommand
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: LogoutCommand
+  nameWithType: MainViewModel.LogoutCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LogoutCommand
+  type: Property
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: LogoutCommand
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 29
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public ICommand LogoutCommand { get; }
+    parameters: []
+    return:
+      type: System.Windows.Input.ICommand
+    content.vb: Public ReadOnly Property LogoutCommand As ICommand
+  overload: Caesar.App.ViewModels.MainViewModel.LogoutCommand*
+- uid: Caesar.App.ViewModels.MainViewModel.#ctor(Caesar.App.Services.IApiService,Caesar.App.Services.ITokenService)
+  commentId: M:Caesar.App.ViewModels.MainViewModel.#ctor(Caesar.App.Services.IApiService,Caesar.App.Services.ITokenService)
+  id: '#ctor(Caesar.App.Services.IApiService,Caesar.App.Services.ITokenService)'
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: MainViewModel(IApiService, ITokenService)
+  nameWithType: MainViewModel.MainViewModel(IApiService, ITokenService)
+  fullName: Caesar.App.ViewModels.MainViewModel.MainViewModel(Caesar.App.Services.IApiService, Caesar.App.Services.ITokenService)
+  type: Constructor
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: .ctor
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 31
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public MainViewModel(IApiService apiService, ITokenService tokenService)
+    parameters:
+    - id: apiService
+      type: Caesar.App.Services.IApiService
+    - id: tokenService
+      type: Caesar.App.Services.ITokenService
+    content.vb: Public Sub New(apiService As IApiService, tokenService As ITokenService)
+  overload: Caesar.App.ViewModels.MainViewModel.#ctor*
+  nameWithType.vb: MainViewModel.New(IApiService, ITokenService)
+  fullName.vb: Caesar.App.ViewModels.MainViewModel.New(Caesar.App.Services.IApiService, Caesar.App.Services.ITokenService)
+  name.vb: New(IApiService, ITokenService)
+- uid: Caesar.App.ViewModels.MainViewModel.LoadData
+  commentId: M:Caesar.App.ViewModels.MainViewModel.LoadData
+  id: LoadData
+  parent: Caesar.App.ViewModels.MainViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoadData()
+  nameWithType: MainViewModel.LoadData()
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadData()
+  type: Method
+  source:
+    remote:
+      path: Caesar.App/ViewModels/MainViewModel.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: LoadData
+    path: ../Caesar.App/ViewModels/MainViewModel.cs
+    startLine: 50
+  assemblies:
+  - Caesar.App
+  namespace: Caesar.App.ViewModels
+  syntax:
+    content: public Task LoadData()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function LoadData() As Task
+  overload: Caesar.App.ViewModels.MainViewModel.LoadData*
+references:
+- uid: Caesar.App.ViewModels
+  commentId: N:Caesar.App.ViewModels
+  href: Caesar.html
+  name: Caesar.App.ViewModels
+  nameWithType: Caesar.App.ViewModels
+  fullName: Caesar.App.ViewModels
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.ViewModels
+    name: ViewModels
+    href: Caesar.App.ViewModels.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.ViewModels
+    name: ViewModels
+    href: Caesar.App.ViewModels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Caesar.App.ViewModels.BaseViewModel
+  commentId: T:Caesar.App.ViewModels.BaseViewModel
+  parent: Caesar.App.ViewModels
+  href: Caesar.App.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: Caesar.App.ViewModels.BaseViewModel
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: Caesar.App.ViewModels.BaseViewModel.IsBusy
+  commentId: P:Caesar.App.ViewModels.BaseViewModel.IsBusy
+  parent: Caesar.App.ViewModels.BaseViewModel
+  href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_IsBusy
+  name: IsBusy
+  nameWithType: BaseViewModel.IsBusy
+  fullName: Caesar.App.ViewModels.BaseViewModel.IsBusy
+- uid: Caesar.App.ViewModels.BaseViewModel.PropertyChanged
+  commentId: E:Caesar.App.ViewModels.BaseViewModel.PropertyChanged
+  parent: Caesar.App.ViewModels.BaseViewModel
+  href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+  fullName: Caesar.App.ViewModels.BaseViewModel.PropertyChanged
+- uid: Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  commentId: M:Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  parent: Caesar.App.ViewModels.BaseViewModel
+  isExternal: true
+  href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: BaseViewModel.OnPropertyChanged(string)
+  fullName: Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(string)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+  fullName.vb: Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Caesar.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1({T}@,{T},System.String)
+  commentId: M:Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  parent: Caesar.App.ViewModels.BaseViewModel
+  definition: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  name: SetProperty<T>(ref T, T, string)
+  nameWithType: BaseViewModel.SetProperty<T>(ref T, T, string)
+  fullName: Caesar.App.ViewModels.BaseViewModel.SetProperty<T>(ref T, T, string)
+  nameWithType.vb: BaseViewModel.SetProperty(Of T)(T, T, String)
+  fullName.vb: Caesar.App.ViewModels.BaseViewModel.SetProperty(Of T)(T, T, String)
+  name.vb: SetProperty(Of T)(T, T, String)
+  spec.csharp:
+  - uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+    name: SetProperty
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+    name: SetProperty
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  commentId: M:Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  isExternal: true
+  href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  name: SetProperty<T>(ref T, T, string)
+  nameWithType: BaseViewModel.SetProperty<T>(ref T, T, string)
+  fullName: Caesar.App.ViewModels.BaseViewModel.SetProperty<T>(ref T, T, string)
+  nameWithType.vb: BaseViewModel.SetProperty(Of T)(T, T, String)
+  fullName.vb: Caesar.App.ViewModels.BaseViewModel.SetProperty(Of T)(T, T, String)
+  name.vb: SetProperty(Of T)(T, T, String)
+  spec.csharp:
+  - uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+    name: SetProperty
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: ref
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Caesar.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+    name: SetProperty
+    href: Caesar.App.ViewModels.BaseViewModel.html#Caesar_App_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Caesar.App.ViewModels.MainViewModel.MenuItems*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.MenuItems
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_MenuItems
+  name: MenuItems
+  nameWithType: MainViewModel.MenuItems
+  fullName: Caesar.App.ViewModels.MainViewModel.MenuItems
+- uid: System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.MenuItemDto}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.MenuItemDto}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<MenuItemDto>
+  nameWithType: ObservableCollection<MenuItemDto>
+  fullName: System.Collections.ObjectModel.ObservableCollection<Caesar.Core.DTOs.MenuItemDto>
+  nameWithType.vb: ObservableCollection(Of MenuItemDto)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of Caesar.Core.DTOs.MenuItemDto)
+  name.vb: ObservableCollection(Of MenuItemDto)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: Caesar.Core.DTOs.MenuItemDto
+    name: MenuItemDto
+    href: Caesar.Core.DTOs.MenuItemDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Caesar.Core.DTOs.MenuItemDto
+    name: MenuItemDto
+    href: Caesar.Core.DTOs.MenuItemDto.html
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: Caesar.App.ViewModels.MainViewModel.Reservations*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.Reservations
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_Reservations
+  name: Reservations
+  nameWithType: MainViewModel.Reservations
+  fullName: Caesar.App.ViewModels.MainViewModel.Reservations
+- uid: System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.ReservationDto}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{Caesar.Core.DTOs.ReservationDto}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<ReservationDto>
+  nameWithType: ObservableCollection<ReservationDto>
+  fullName: System.Collections.ObjectModel.ObservableCollection<Caesar.Core.DTOs.ReservationDto>
+  nameWithType.vb: ObservableCollection(Of ReservationDto)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of Caesar.Core.DTOs.ReservationDto)
+  name.vb: ObservableCollection(Of ReservationDto)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: Caesar.Core.DTOs.ReservationDto
+    name: ReservationDto
+    href: Caesar.Core.DTOs.ReservationDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Caesar.Core.DTOs.ReservationDto
+    name: ReservationDto
+    href: Caesar.Core.DTOs.ReservationDto.html
+  - name: )
+- uid: Caesar.App.ViewModels.MainViewModel.SelectedMenuItem*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_SelectedMenuItem
+  name: SelectedMenuItem
+  nameWithType: MainViewModel.SelectedMenuItem
+  fullName: Caesar.App.ViewModels.MainViewModel.SelectedMenuItem
+- uid: Caesar.Core.DTOs.MenuItemDto
+  commentId: T:Caesar.Core.DTOs.MenuItemDto
+  parent: Caesar.Core.DTOs
+  href: Caesar.Core.DTOs.MenuItemDto.html
+  name: MenuItemDto
+  nameWithType: MenuItemDto
+  fullName: Caesar.Core.DTOs.MenuItemDto
+- uid: Caesar.Core.DTOs
+  commentId: N:Caesar.Core.DTOs
+  href: Caesar.html
+  name: Caesar.Core.DTOs
+  nameWithType: Caesar.Core.DTOs
+  fullName: Caesar.Core.DTOs
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.DTOs
+    name: DTOs
+    href: Caesar.Core.DTOs.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.DTOs
+    name: DTOs
+    href: Caesar.Core.DTOs.html
+- uid: Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_LoadMenuItemsCommand
+  name: LoadMenuItemsCommand
+  nameWithType: MainViewModel.LoadMenuItemsCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadMenuItemsCommand
+- uid: System.Windows.Input.ICommand
+  commentId: T:System.Windows.Input.ICommand
+  parent: System.Windows.Input
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.input.icommand
+  name: ICommand
+  nameWithType: ICommand
+  fullName: System.Windows.Input.ICommand
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Input
+    name: Input
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Input
+    name: Input
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.input
+- uid: Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_LoadReservationsCommand
+  name: LoadReservationsCommand
+  nameWithType: MainViewModel.LoadReservationsCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadReservationsCommand
+- uid: Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_AddMenuItemCommand
+  name: AddMenuItemCommand
+  nameWithType: MainViewModel.AddMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.AddMenuItemCommand
+- uid: Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_EditMenuItemCommand
+  name: EditMenuItemCommand
+  nameWithType: MainViewModel.EditMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.EditMenuItemCommand
+- uid: Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_DeleteMenuItemCommand
+  name: DeleteMenuItemCommand
+  nameWithType: MainViewModel.DeleteMenuItemCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.DeleteMenuItemCommand
+- uid: Caesar.App.ViewModels.MainViewModel.LogoutCommand*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.LogoutCommand
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_LogoutCommand
+  name: LogoutCommand
+  nameWithType: MainViewModel.LogoutCommand
+  fullName: Caesar.App.ViewModels.MainViewModel.LogoutCommand
+- uid: Caesar.App.ViewModels.MainViewModel.#ctor*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.#ctor
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel__ctor_Caesar_App_Services_IApiService_Caesar_App_Services_ITokenService_
+  name: MainViewModel
+  nameWithType: MainViewModel.MainViewModel
+  fullName: Caesar.App.ViewModels.MainViewModel.MainViewModel
+  nameWithType.vb: MainViewModel.New
+  fullName.vb: Caesar.App.ViewModels.MainViewModel.New
+  name.vb: New
+- uid: Caesar.App.Services.IApiService
+  commentId: T:Caesar.App.Services.IApiService
+  parent: Caesar.App.Services
+  href: Caesar.App.Services.IApiService.html
+  name: IApiService
+  nameWithType: IApiService
+  fullName: Caesar.App.Services.IApiService
+- uid: Caesar.App.Services.ITokenService
+  commentId: T:Caesar.App.Services.ITokenService
+  parent: Caesar.App.Services
+  href: Caesar.App.Services.ITokenService.html
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Caesar.App.Services.ITokenService
+- uid: Caesar.App.Services
+  commentId: N:Caesar.App.Services
+  href: Caesar.html
+  name: Caesar.App.Services
+  nameWithType: Caesar.App.Services
+  fullName: Caesar.App.Services
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.Services
+    name: Services
+    href: Caesar.App.Services.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.App
+    name: App
+    href: Caesar.App.html
+  - name: .
+  - uid: Caesar.App.Services
+    name: Services
+    href: Caesar.App.Services.html
+- uid: Caesar.App.ViewModels.MainViewModel.LoadData*
+  commentId: Overload:Caesar.App.ViewModels.MainViewModel.LoadData
+  href: Caesar.App.ViewModels.MainViewModel.html#Caesar_App_ViewModels_MainViewModel_LoadData
+  name: LoadData
+  nameWithType: MainViewModel.LoadData
+  fullName: Caesar.App.ViewModels.MainViewModel.LoadData
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

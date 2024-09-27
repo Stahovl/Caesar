@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.App.WinUI
+  commentId: N:Caesar.App.WinUI
+  id: Caesar.App.WinUI
+  children:
+  - Caesar.App.WinUI.App
+  - Caesar.App.WinUI.Program
+  langs:
+  - csharp
+  - vb
+  name: Caesar.App.WinUI
+  nameWithType: Caesar.App.WinUI
+  fullName: Caesar.App.WinUI
+  type: Namespace
+  assemblies:
+  - Caesar.App
+references:
+- uid: Caesar.App.WinUI.App
+  commentId: T:Caesar.App.WinUI.App
+  href: Caesar.App.WinUI.App.html
+  name: App
+  nameWithType: App
+  fullName: Caesar.App.WinUI.App
+- uid: Caesar.App.WinUI.Program
+  commentId: T:Caesar.App.WinUI.Program
+  href: Caesar.App.WinUI.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: Caesar.App.WinUI.Program

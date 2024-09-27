@@ -1,0 +1,185 @@
+### YamlMime:TableOfContent
+items:
+- uid: Caesar.API
+  name: Caesar.API
+  items:
+  - uid: Caesar.API.Program
+    name: Program
+- uid: Caesar.API.Controllers
+  name: Caesar.API.Controllers
+  items:
+  - uid: Caesar.API.Controllers.AuthController
+    name: AuthController
+  - uid: Caesar.API.Controllers.LoginModel
+    name: LoginModel
+  - uid: Caesar.API.Controllers.MenuItemsController
+    name: MenuItemsController
+  - uid: Caesar.API.Controllers.ReservationsController
+    name: ReservationsController
+- uid: Caesar.API.Middleware
+  name: Caesar.API.Middleware
+  items:
+  - uid: Caesar.API.Middleware.GlobalExceptionHandler
+    name: GlobalExceptionHandler
+- uid: Caesar.API.Validators
+  name: Caesar.API.Validators
+  items:
+  - uid: Caesar.API.Validators.MenuItemDtoValidator
+    name: MenuItemDtoValidator
+  - uid: Caesar.API.Validators.ReservationDtoValidator
+    name: ReservationDtoValidator
+- uid: Caesar.App
+  name: Caesar.App
+  items:
+  - uid: Caesar.App.App
+    name: App
+  - uid: Caesar.App.AppShell
+    name: AppShell
+  - uid: Caesar.App.MauiProgram
+    name: MauiProgram
+- uid: Caesar.App.Converters
+  name: Caesar.App.Converters
+  items:
+  - uid: Caesar.App.Converters.DecimalConverter
+    name: DecimalConverter
+- uid: Caesar.App.Models
+  name: Caesar.App.Models
+  items:
+  - uid: Caesar.App.Models.LoginResult
+    name: LoginResult
+- uid: Caesar.App.Services
+  name: Caesar.App.Services
+  items:
+  - uid: Caesar.App.Services.ApiService
+    name: ApiService
+  - uid: Caesar.App.Services.IApiService
+    name: IApiService
+  - uid: Caesar.App.Services.ITokenService
+    name: ITokenService
+  - uid: Caesar.App.Services.TokenService
+    name: TokenService
+- uid: Caesar.App.ViewModels
+  name: Caesar.App.ViewModels
+  items:
+  - uid: Caesar.App.ViewModels.BaseViewModel
+    name: BaseViewModel
+  - uid: Caesar.App.ViewModels.LoginViewModel
+    name: LoginViewModel
+  - uid: Caesar.App.ViewModels.MainViewModel
+    name: MainViewModel
+  - uid: Caesar.App.ViewModels.MenuItemDetailViewModel
+    name: MenuItemDetailViewModel
+  - uid: Caesar.App.ViewModels.MenuItemViewModel
+    name: MenuItemViewModel
+- uid: Caesar.App.Views
+  name: Caesar.App.Views
+  items:
+  - uid: Caesar.App.Views.LoginPage
+    name: LoginPage
+  - uid: Caesar.App.Views.MainPage
+    name: MainPage
+  - uid: Caesar.App.Views.MenuItemDetailPage
+    name: MenuItemDetailPage
+- uid: Caesar.App.WinUI
+  name: Caesar.App.WinUI
+  items:
+  - uid: Caesar.App.WinUI.App
+    name: App
+  - uid: Caesar.App.WinUI.Program
+    name: Program
+- uid: Caesar.Core.DTOs
+  name: Caesar.Core.DTOs
+  items:
+  - uid: Caesar.Core.DTOs.MenuItemDto
+    name: MenuItemDto
+  - uid: Caesar.Core.DTOs.ReservationDto
+    name: ReservationDto
+- uid: Caesar.Core.Entities
+  name: Caesar.Core.Entities
+  items:
+  - uid: Caesar.Core.Entities.MenuItem
+    name: MenuItem
+  - uid: Caesar.Core.Entities.Reservation
+    name: Reservation
+  - uid: Caesar.Core.Entities.User
+    name: User
+- uid: Caesar.Core.Interfaces
+  name: Caesar.Core.Interfaces
+  items:
+  - uid: Caesar.Core.Interfaces.IAuthService
+    name: IAuthService
+  - uid: Caesar.Core.Interfaces.IMenuItemRepository
+    name: IMenuItemRepository
+  - uid: Caesar.Core.Interfaces.IMenuItemService
+    name: IMenuItemService
+  - uid: Caesar.Core.Interfaces.IReservationRepository
+    name: IReservationRepository
+  - uid: Caesar.Core.Interfaces.IReservationService
+    name: IReservationService
+- uid: Caesar.Core.Services
+  name: Caesar.Core.Services
+  items:
+  - uid: Caesar.Core.Services.MenuItemService
+    name: MenuItemService
+  - uid: Caesar.Core.Services.ReservationService
+    name: ReservationService
+- uid: Caesar.Infrastructure
+  name: Caesar.Infrastructure
+  items:
+  - uid: Caesar.Infrastructure.InfrastructureServiceRegistration
+    name: InfrastructureServiceRegistration
+- uid: Caesar.Infrastructure.Data
+  name: Caesar.Infrastructure.Data
+  items:
+  - uid: Caesar.Infrastructure.Data.CaesarDbContext
+    name: CaesarDbContext
+- uid: Caesar.Infrastructure.Migrations
+  name: Caesar.Infrastructure.Migrations
+  items:
+  - uid: Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem
+    name: AddImageUrlToMenuItem
+  - uid: Caesar.Infrastructure.Migrations.AllowNullImageUrl
+    name: AllowNullImageUrl
+  - uid: Caesar.Infrastructure.Migrations.InitialCreate
+    name: InitialCreate
+- uid: Caesar.Infrastructure.Repositories
+  name: Caesar.Infrastructure.Repositories
+  items:
+  - uid: Caesar.Infrastructure.Repositories.MenuItemRepository
+    name: MenuItemRepository
+  - uid: Caesar.Infrastructure.Repositories.ReservationRepository
+    name: ReservationRepository
+- uid: Caesar.Infrastructure.Services
+  name: Caesar.Infrastructure.Services
+  items:
+  - uid: Caesar.Infrastructure.Services.AuthService
+    name: AuthService
+- uid: Caesar.Tests
+  name: Caesar.Tests
+  items:
+  - uid: Caesar.Tests.ReservationServiceTests
+    name: ReservationServiceTests
+- uid: Caesar.Web
+  name: Caesar.Web
+  items:
+  - uid: Caesar.Web.Program
+    name: Program
+- uid: Caesar.Web.Controllers
+  name: Caesar.Web.Controllers
+  items:
+  - uid: Caesar.Web.Controllers.AccountController
+    name: AccountController
+  - uid: Caesar.Web.Controllers.HomeController
+    name: HomeController
+  - uid: Caesar.Web.Controllers.LoginViewModel
+    name: LoginViewModel
+  - uid: Caesar.Web.Controllers.RegisterViewModel
+    name: RegisterViewModel
+  - uid: Caesar.Web.Controllers.ReservationController
+    name: ReservationController
+- uid: Caesar.Web.Models
+  name: Caesar.Web.Models
+  items:
+  - uid: Caesar.Web.Models.ErrorViewModel
+    name: ErrorViewModel
+memberLayout: SamePage

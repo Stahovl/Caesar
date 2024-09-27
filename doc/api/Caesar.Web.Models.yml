@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Web.Models
+  commentId: N:Caesar.Web.Models
+  id: Caesar.Web.Models
+  children:
+  - Caesar.Web.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Web.Models
+  nameWithType: Caesar.Web.Models
+  fullName: Caesar.Web.Models
+  type: Namespace
+  assemblies:
+  - Caesar.Web
+references:
+- uid: Caesar.Web.Models.ErrorViewModel
+  commentId: T:Caesar.Web.Models.ErrorViewModel
+  href: Caesar.Web.Models.ErrorViewModel.html
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: Caesar.Web.Models.ErrorViewModel

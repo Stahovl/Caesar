@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Infrastructure.Migrations
+  commentId: N:Caesar.Infrastructure.Migrations
+  id: Caesar.Infrastructure.Migrations
+  children:
+  - Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem
+  - Caesar.Infrastructure.Migrations.AllowNullImageUrl
+  - Caesar.Infrastructure.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Infrastructure.Migrations
+  nameWithType: Caesar.Infrastructure.Migrations
+  fullName: Caesar.Infrastructure.Migrations
+  type: Namespace
+  assemblies:
+  - Caesar.Infrastructure
+references:
+- uid: Caesar.Infrastructure.Migrations.InitialCreate
+  commentId: T:Caesar.Infrastructure.Migrations.InitialCreate
+  href: Caesar.Infrastructure.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: Caesar.Infrastructure.Migrations.InitialCreate
+- uid: Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem
+  commentId: T:Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem
+  href: Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem.html
+  name: AddImageUrlToMenuItem
+  nameWithType: AddImageUrlToMenuItem
+  fullName: Caesar.Infrastructure.Migrations.AddImageUrlToMenuItem
+- uid: Caesar.Infrastructure.Migrations.AllowNullImageUrl
+  commentId: T:Caesar.Infrastructure.Migrations.AllowNullImageUrl
+  href: Caesar.Infrastructure.Migrations.AllowNullImageUrl.html
+  name: AllowNullImageUrl
+  nameWithType: AllowNullImageUrl
+  fullName: Caesar.Infrastructure.Migrations.AllowNullImageUrl

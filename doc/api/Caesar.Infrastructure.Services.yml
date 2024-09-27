@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Infrastructure.Services
+  commentId: N:Caesar.Infrastructure.Services
+  id: Caesar.Infrastructure.Services
+  children:
+  - Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Infrastructure.Services
+  nameWithType: Caesar.Infrastructure.Services
+  fullName: Caesar.Infrastructure.Services
+  type: Namespace
+  assemblies:
+  - Caesar.Infrastructure
+references:
+- uid: Caesar.Infrastructure.Services.AuthService
+  commentId: T:Caesar.Infrastructure.Services.AuthService
+  href: Caesar.Infrastructure.Services.AuthService.html
+  name: AuthService
+  nameWithType: AuthService
+  fullName: Caesar.Infrastructure.Services.AuthService

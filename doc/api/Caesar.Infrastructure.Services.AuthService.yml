@@ -1,0 +1,1004 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Infrastructure.Services.AuthService
+  commentId: T:Caesar.Infrastructure.Services.AuthService
+  id: AuthService
+  parent: Caesar.Infrastructure.Services
+  children:
+  - Caesar.Infrastructure.Services.AuthService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Caesar.Infrastructure.Data.CaesarDbContext)
+  - Caesar.Infrastructure.Services.AuthService.ClearTokenAsync
+  - Caesar.Infrastructure.Services.AuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  - Caesar.Infrastructure.Services.AuthService.GetTokenAsync
+  - Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+  - Caesar.Infrastructure.Services.AuthService.LoginAsync(System.String,System.String)
+  - Caesar.Infrastructure.Services.AuthService.SetTokenAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: AuthService
+  nameWithType: AuthService
+  fullName: Caesar.Infrastructure.Services.AuthService
+  type: Class
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: AuthService
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 12
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: 'public class AuthService : IAuthService'
+    content.vb: Public Class AuthService Implements IAuthService
+  inheritance:
+  - System.Object
+  implements:
+  - Caesar.Core.Interfaces.IAuthService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Caesar.Infrastructure.Services.AuthService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Caesar.Infrastructure.Data.CaesarDbContext)
+  commentId: M:Caesar.Infrastructure.Services.AuthService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Caesar.Infrastructure.Data.CaesarDbContext)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,Caesar.Infrastructure.Data.CaesarDbContext)'
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: AuthService(IConfiguration, CaesarDbContext)
+  nameWithType: AuthService.AuthService(IConfiguration, CaesarDbContext)
+  fullName: Caesar.Infrastructure.Services.AuthService.AuthService(Microsoft.Extensions.Configuration.IConfiguration, Caesar.Infrastructure.Data.CaesarDbContext)
+  type: Constructor
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: .ctor
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 17
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: public AuthService(IConfiguration configuration, CaesarDbContext context)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: context
+      type: Caesar.Infrastructure.Data.CaesarDbContext
+    content.vb: Public Sub New(configuration As IConfiguration, context As CaesarDbContext)
+  overload: Caesar.Infrastructure.Services.AuthService.#ctor*
+  nameWithType.vb: AuthService.New(IConfiguration, CaesarDbContext)
+  fullName.vb: Caesar.Infrastructure.Services.AuthService.New(Microsoft.Extensions.Configuration.IConfiguration, Caesar.Infrastructure.Data.CaesarDbContext)
+  name.vb: New(IConfiguration, CaesarDbContext)
+- uid: Caesar.Infrastructure.Services.AuthService.LoginAsync(System.String,System.String)
+  commentId: M:Caesar.Infrastructure.Services.AuthService.LoginAsync(System.String,System.String)
+  id: LoginAsync(System.String,System.String)
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: LoginAsync(string, string)
+  nameWithType: AuthService.LoginAsync(string, string)
+  fullName: Caesar.Infrastructure.Services.AuthService.LoginAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: LoginAsync
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 23
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  example: []
+  syntax:
+    content: public Task<(bool IsSuccess, string Token)> LoginAsync(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.ValueTuple{System.Boolean,System.String}}
+    content.vb: Public Function LoginAsync(username As String, password As String) As Task(Of (IsSuccess As Boolean, Token As String))
+  overload: Caesar.Infrastructure.Services.AuthService.LoginAsync*
+  implements:
+  - Caesar.Core.Interfaces.IAuthService.LoginAsync(System.String,System.String)
+  nameWithType.vb: AuthService.LoginAsync(String, String)
+  fullName.vb: Caesar.Infrastructure.Services.AuthService.LoginAsync(String, String)
+  name.vb: LoginAsync(String, String)
+- uid: Caesar.Infrastructure.Services.AuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  commentId: M:Caesar.Infrastructure.Services.AuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  id: GenerateJwtToken(Caesar.Core.Entities.User)
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: GenerateJwtToken(User)
+  nameWithType: AuthService.GenerateJwtToken(User)
+  fullName: Caesar.Infrastructure.Services.AuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  type: Method
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: GenerateJwtToken
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 36
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  example: []
+  syntax:
+    content: public string GenerateJwtToken(User user)
+    parameters:
+    - id: user
+      type: Caesar.Core.Entities.User
+    return:
+      type: System.String
+    content.vb: Public Function GenerateJwtToken(user As User) As String
+  overload: Caesar.Infrastructure.Services.AuthService.GenerateJwtToken*
+  implements:
+  - Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+- uid: Caesar.Infrastructure.Services.AuthService.GetTokenAsync
+  commentId: M:Caesar.Infrastructure.Services.AuthService.GetTokenAsync
+  id: GetTokenAsync
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenAsync()
+  nameWithType: AuthService.GetTokenAsync()
+  fullName: Caesar.Infrastructure.Services.AuthService.GetTokenAsync()
+  type: Method
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: GetTokenAsync
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 61
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: public Task<string> GetTokenAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GetTokenAsync() As Task(Of String)
+  overload: Caesar.Infrastructure.Services.AuthService.GetTokenAsync*
+- uid: Caesar.Infrastructure.Services.AuthService.SetTokenAsync(System.String)
+  commentId: M:Caesar.Infrastructure.Services.AuthService.SetTokenAsync(System.String)
+  id: SetTokenAsync(System.String)
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: SetTokenAsync(string)
+  nameWithType: AuthService.SetTokenAsync(string)
+  fullName: Caesar.Infrastructure.Services.AuthService.SetTokenAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: SetTokenAsync
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 62
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: public Task SetTokenAsync(string token)
+    parameters:
+    - id: token
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SetTokenAsync(token As String) As Task
+  overload: Caesar.Infrastructure.Services.AuthService.SetTokenAsync*
+  nameWithType.vb: AuthService.SetTokenAsync(String)
+  fullName.vb: Caesar.Infrastructure.Services.AuthService.SetTokenAsync(String)
+  name.vb: SetTokenAsync(String)
+- uid: Caesar.Infrastructure.Services.AuthService.ClearTokenAsync
+  commentId: M:Caesar.Infrastructure.Services.AuthService.ClearTokenAsync
+  id: ClearTokenAsync
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: ClearTokenAsync()
+  nameWithType: AuthService.ClearTokenAsync()
+  fullName: Caesar.Infrastructure.Services.AuthService.ClearTokenAsync()
+  type: Method
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: ClearTokenAsync
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 63
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: public Task ClearTokenAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function ClearTokenAsync() As Task
+  overload: Caesar.Infrastructure.Services.AuthService.ClearTokenAsync*
+- uid: Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+  commentId: P:Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+  id: IsAuthenticated
+  parent: Caesar.Infrastructure.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticated
+  nameWithType: AuthService.IsAuthenticated
+  fullName: Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+  type: Property
+  source:
+    remote:
+      path: Caesar.Infrastructure/Services/AuthService.cs
+      branch: master
+      repo: https://github.com/Stahovl/Caesar.git
+    id: IsAuthenticated
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
+    startLine: 64
+  assemblies:
+  - Caesar.Infrastructure
+  namespace: Caesar.Infrastructure.Services
+  syntax:
+    content: public bool IsAuthenticated { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAuthenticated As Boolean
+  overload: Caesar.Infrastructure.Services.AuthService.IsAuthenticated*
+references:
+- uid: Caesar.Infrastructure.Services
+  commentId: N:Caesar.Infrastructure.Services
+  href: Caesar.html
+  name: Caesar.Infrastructure.Services
+  nameWithType: Caesar.Infrastructure.Services
+  fullName: Caesar.Infrastructure.Services
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Infrastructure
+    name: Infrastructure
+    href: Caesar.Infrastructure.html
+  - name: .
+  - uid: Caesar.Infrastructure.Services
+    name: Services
+    href: Caesar.Infrastructure.Services.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Infrastructure
+    name: Infrastructure
+    href: Caesar.Infrastructure.html
+  - name: .
+  - uid: Caesar.Infrastructure.Services
+    name: Services
+    href: Caesar.Infrastructure.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Caesar.Core.Interfaces.IAuthService
+  commentId: T:Caesar.Core.Interfaces.IAuthService
+  parent: Caesar.Core.Interfaces
+  href: Caesar.Core.Interfaces.IAuthService.html
+  name: IAuthService
+  nameWithType: IAuthService
+  fullName: Caesar.Core.Interfaces.IAuthService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Caesar.Core.Interfaces
+  commentId: N:Caesar.Core.Interfaces
+  href: Caesar.html
+  name: Caesar.Core.Interfaces
+  nameWithType: Caesar.Core.Interfaces
+  fullName: Caesar.Core.Interfaces
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.Interfaces
+    name: Interfaces
+    href: Caesar.Core.Interfaces.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.Interfaces
+    name: Interfaces
+    href: Caesar.Core.Interfaces.html
+- uid: Caesar.Infrastructure.Services.AuthService.#ctor*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.#ctor
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService__ctor_Microsoft_Extensions_Configuration_IConfiguration_Caesar_Infrastructure_Data_CaesarDbContext_
+  name: AuthService
+  nameWithType: AuthService.AuthService
+  fullName: Caesar.Infrastructure.Services.AuthService.AuthService
+  nameWithType.vb: AuthService.New
+  fullName.vb: Caesar.Infrastructure.Services.AuthService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Caesar.Infrastructure.Data.CaesarDbContext
+  commentId: T:Caesar.Infrastructure.Data.CaesarDbContext
+  parent: Caesar.Infrastructure.Data
+  href: Caesar.Infrastructure.Data.CaesarDbContext.html
+  name: CaesarDbContext
+  nameWithType: CaesarDbContext
+  fullName: Caesar.Infrastructure.Data.CaesarDbContext
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: Caesar.Infrastructure.Data
+  commentId: N:Caesar.Infrastructure.Data
+  href: Caesar.html
+  name: Caesar.Infrastructure.Data
+  nameWithType: Caesar.Infrastructure.Data
+  fullName: Caesar.Infrastructure.Data
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Infrastructure
+    name: Infrastructure
+    href: Caesar.Infrastructure.html
+  - name: .
+  - uid: Caesar.Infrastructure.Data
+    name: Data
+    href: Caesar.Infrastructure.Data.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Infrastructure
+    name: Infrastructure
+    href: Caesar.Infrastructure.html
+  - name: .
+  - uid: Caesar.Infrastructure.Data
+    name: Data
+    href: Caesar.Infrastructure.Data.html
+- uid: Caesar.Infrastructure.Services.AuthService.LoginAsync*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.LoginAsync
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_LoginAsync_System_String_System_String_
+  name: LoginAsync
+  nameWithType: AuthService.LoginAsync
+  fullName: Caesar.Infrastructure.Services.AuthService.LoginAsync
+- uid: Caesar.Core.Interfaces.IAuthService.LoginAsync(System.String,System.String)
+  commentId: M:Caesar.Core.Interfaces.IAuthService.LoginAsync(System.String,System.String)
+  parent: Caesar.Core.Interfaces.IAuthService
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: LoginAsync(string, string)
+  nameWithType: IAuthService.LoginAsync(string, string)
+  fullName: Caesar.Core.Interfaces.IAuthService.LoginAsync(string, string)
+  nameWithType.vb: IAuthService.LoginAsync(String, String)
+  fullName.vb: Caesar.Core.Interfaces.IAuthService.LoginAsync(String, String)
+  name.vb: LoginAsync(String, String)
+  spec.csharp:
+  - uid: Caesar.Core.Interfaces.IAuthService.LoginAsync(System.String,System.String)
+    name: LoginAsync
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Caesar.Core.Interfaces.IAuthService.LoginAsync(System.String,System.String)
+    name: LoginAsync
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.ValueTuple{System.Boolean,System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.ValueTuple{System.Boolean,System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<(bool IsSuccess, string Token)>
+  nameWithType: Task<(bool IsSuccess, string Token)>
+  fullName: System.Threading.Tasks.Task<(bool IsSuccess, string Token)>
+  nameWithType.vb: Task(Of (IsSuccess As Boolean, Token As String))
+  fullName.vb: System.Threading.Tasks.Task(Of (IsSuccess As Boolean, Token As String))
+  name.vb: Task(Of (IsSuccess As Boolean, Token As String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: " "
+  - uid: System.ValueTuple{System.Boolean,System.String}.IsSuccess
+    name: IsSuccess
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.issuccess
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.Boolean,System.String}.Token
+    name: Token
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.token
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Boolean,System.String}.IsSuccess
+    name: IsSuccess
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.issuccess
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Boolean,System.String}.Token
+    name: Token
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.token
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Caesar.Infrastructure.Services.AuthService.GenerateJwtToken*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.GenerateJwtToken
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_GenerateJwtToken_Caesar_Core_Entities_User_
+  name: GenerateJwtToken
+  nameWithType: AuthService.GenerateJwtToken
+  fullName: Caesar.Infrastructure.Services.AuthService.GenerateJwtToken
+- uid: Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  commentId: M:Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  parent: Caesar.Core.Interfaces.IAuthService
+  name: GenerateJwtToken(User)
+  nameWithType: IAuthService.GenerateJwtToken(User)
+  fullName: Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+  spec.csharp:
+  - uid: Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+    name: GenerateJwtToken
+  - name: (
+  - uid: Caesar.Core.Entities.User
+    name: User
+  - name: )
+  spec.vb:
+  - uid: Caesar.Core.Interfaces.IAuthService.GenerateJwtToken(Caesar.Core.Entities.User)
+    name: GenerateJwtToken
+  - name: (
+  - uid: Caesar.Core.Entities.User
+    name: User
+  - name: )
+- uid: Caesar.Core.Entities.User
+  commentId: T:Caesar.Core.Entities.User
+  parent: Caesar.Core.Entities
+  href: Caesar.Core.Entities.User.html
+  name: User
+  nameWithType: User
+  fullName: Caesar.Core.Entities.User
+- uid: Caesar.Core.Entities
+  commentId: N:Caesar.Core.Entities
+  href: Caesar.html
+  name: Caesar.Core.Entities
+  nameWithType: Caesar.Core.Entities
+  fullName: Caesar.Core.Entities
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.Entities
+    name: Entities
+    href: Caesar.Core.Entities.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Core
+    name: Core
+    href: Caesar.Core.html
+  - name: .
+  - uid: Caesar.Core.Entities
+    name: Entities
+    href: Caesar.Core.Entities.html
+- uid: Caesar.Infrastructure.Services.AuthService.GetTokenAsync*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.GetTokenAsync
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_GetTokenAsync
+  name: GetTokenAsync
+  nameWithType: AuthService.GetTokenAsync
+  fullName: Caesar.Infrastructure.Services.AuthService.GetTokenAsync
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Caesar.Infrastructure.Services.AuthService.SetTokenAsync*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.SetTokenAsync
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_SetTokenAsync_System_String_
+  name: SetTokenAsync
+  nameWithType: AuthService.SetTokenAsync
+  fullName: Caesar.Infrastructure.Services.AuthService.SetTokenAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Caesar.Infrastructure.Services.AuthService.ClearTokenAsync*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.ClearTokenAsync
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_ClearTokenAsync
+  name: ClearTokenAsync
+  nameWithType: AuthService.ClearTokenAsync
+  fullName: Caesar.Infrastructure.Services.AuthService.ClearTokenAsync
+- uid: Caesar.Infrastructure.Services.AuthService.IsAuthenticated*
+  commentId: Overload:Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+  href: Caesar.Infrastructure.Services.AuthService.html#Caesar_Infrastructure_Services_AuthService_IsAuthenticated
+  name: IsAuthenticated
+  nameWithType: AuthService.IsAuthenticated
+  fullName: Caesar.Infrastructure.Services.AuthService.IsAuthenticated
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

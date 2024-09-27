@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Web.Controllers
+  commentId: N:Caesar.Web.Controllers
+  id: Caesar.Web.Controllers
+  children:
+  - Caesar.Web.Controllers.AccountController
+  - Caesar.Web.Controllers.HomeController
+  - Caesar.Web.Controllers.LoginViewModel
+  - Caesar.Web.Controllers.RegisterViewModel
+  - Caesar.Web.Controllers.ReservationController
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Web.Controllers
+  nameWithType: Caesar.Web.Controllers
+  fullName: Caesar.Web.Controllers
+  type: Namespace
+  assemblies:
+  - Caesar.Web
+references:
+- uid: Caesar.Web.Controllers.AccountController
+  commentId: T:Caesar.Web.Controllers.AccountController
+  href: Caesar.Web.Controllers.AccountController.html
+  name: AccountController
+  nameWithType: AccountController
+  fullName: Caesar.Web.Controllers.AccountController
+- uid: Caesar.Web.Controllers.RegisterViewModel
+  commentId: T:Caesar.Web.Controllers.RegisterViewModel
+  parent: Caesar.Web.Controllers
+  href: Caesar.Web.Controllers.RegisterViewModel.html
+  name: RegisterViewModel
+  nameWithType: RegisterViewModel
+  fullName: Caesar.Web.Controllers.RegisterViewModel
+- uid: Caesar.Web.Controllers.LoginViewModel
+  commentId: T:Caesar.Web.Controllers.LoginViewModel
+  parent: Caesar.Web.Controllers
+  href: Caesar.Web.Controllers.LoginViewModel.html
+  name: LoginViewModel
+  nameWithType: LoginViewModel
+  fullName: Caesar.Web.Controllers.LoginViewModel
+- uid: Caesar.Web.Controllers.HomeController
+  commentId: T:Caesar.Web.Controllers.HomeController
+  href: Caesar.Web.Controllers.HomeController.html
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Caesar.Web.Controllers.HomeController
+- uid: Caesar.Web.Controllers.ReservationController
+  commentId: T:Caesar.Web.Controllers.ReservationController
+  href: Caesar.Web.Controllers.ReservationController.html
+  name: ReservationController
+  nameWithType: ReservationController
+  fullName: Caesar.Web.Controllers.ReservationController
+- uid: Caesar.Web.Controllers
+  commentId: N:Caesar.Web.Controllers
+  href: Caesar.html
+  name: Caesar.Web.Controllers
+  nameWithType: Caesar.Web.Controllers
+  fullName: Caesar.Web.Controllers
+  spec.csharp:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Web
+    name: Web
+    href: Caesar.Web.html
+  - name: .
+  - uid: Caesar.Web.Controllers
+    name: Controllers
+    href: Caesar.Web.Controllers.html
+  spec.vb:
+  - uid: Caesar
+    name: Caesar
+    href: Caesar.html
+  - name: .
+  - uid: Caesar.Web
+    name: Web
+    href: Caesar.Web.html
+  - name: .
+  - uid: Caesar.Web.Controllers
+    name: Controllers
+    href: Caesar.Web.Controllers.html

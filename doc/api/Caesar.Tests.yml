@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Caesar.Tests
+  commentId: N:Caesar.Tests
+  id: Caesar.Tests
+  children:
+  - Caesar.Tests.ReservationServiceTests
+  langs:
+  - csharp
+  - vb
+  name: Caesar.Tests
+  nameWithType: Caesar.Tests
+  fullName: Caesar.Tests
+  type: Namespace
+  assemblies:
+  - Caesar.Tests
+references:
+- uid: Caesar.Tests.ReservationServiceTests
+  commentId: T:Caesar.Tests.ReservationServiceTests
+  href: Caesar.Tests.ReservationServiceTests.html
+  name: ReservationServiceTests
+  nameWithType: ReservationServiceTests
+  fullName: Caesar.Tests.ReservationServiceTests
