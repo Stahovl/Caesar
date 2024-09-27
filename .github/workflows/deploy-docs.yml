@@ -29,6 +29,9 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    - name: Install .NET MAUI Workloads
+      run: dotnet workload install maui-tizen
+      
     - run: dotnet tool update -g docfx
     - run: docfx doc/docfx.json
 
