@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemDto
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 2
   assemblies:
   - Caesar.Core
@@ -59,7 +59,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Id
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 4
   assemblies:
   - Caesar.Core
@@ -88,7 +88,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Name
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 5
   assemblies:
   - Caesar.Core
@@ -117,7 +117,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Description
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 6
   assemblies:
   - Caesar.Core
@@ -146,7 +146,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Price
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 7
   assemblies:
   - Caesar.Core
@@ -175,7 +175,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Category
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 8
   assemblies:
   - Caesar.Core
@@ -204,7 +204,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ImageUrl
-    path: Caesar.Core/DTOs/MenuItemDto.cs
+    path: ../Caesar.Core/DTOs/MenuItemDto.cs
     startLine: 9
   assemblies:
   - Caesar.Core

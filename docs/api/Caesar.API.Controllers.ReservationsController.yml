@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ReservationsController
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 6
   assemblies:
   - Caesar.API
@@ -252,7 +252,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 12
   assemblies:
   - Caesar.API
@@ -284,7 +284,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservations
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 17
   assemblies:
   - Caesar.API
@@ -322,7 +322,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservation
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 24
   assemblies:
   - Caesar.API
@@ -368,7 +368,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateReservation
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 35
   assemblies:
   - Caesar.API
@@ -409,7 +409,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateReservation
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 42
   assemblies:
   - Caesar.API
@@ -457,7 +457,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteReservation
-    path: Caesar.API/Controllers/ReservationsController.cs
+    path: ../Caesar.API/Controllers/ReservationsController.cs
     startLine: 54
   assemblies:
   - Caesar.API

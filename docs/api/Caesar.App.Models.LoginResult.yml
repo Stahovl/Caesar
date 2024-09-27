@@ -21,7 +21,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginResult
-    path: Caesar.App/Models/LoginResult.cs
+    path: ../Caesar.App/Models/LoginResult.cs
     startLine: 2
   assemblies:
   - Caesar.App
@@ -56,7 +56,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IsSuccess
-    path: Caesar.App/Models/LoginResult.cs
+    path: ../Caesar.App/Models/LoginResult.cs
     startLine: 4
   assemblies:
   - Caesar.App
@@ -85,7 +85,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Token
-    path: Caesar.App/Models/LoginResult.cs
+    path: ../Caesar.App/Models/LoginResult.cs
     startLine: 5
   assemblies:
   - Caesar.App
@@ -114,7 +114,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ErrorMessage
-    path: Caesar.App/Models/LoginResult.cs
+    path: ../Caesar.App/Models/LoginResult.cs
     startLine: 6
   assemblies:
   - Caesar.App

@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ReservationService
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 7
   assemblies:
   - Caesar.Core
@@ -61,7 +61,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 11
   assemblies:
   - Caesar.Core
@@ -93,7 +93,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateReservationAsync
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 16
   assemblies:
   - Caesar.Core
@@ -127,7 +127,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteReservationAsync
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 31
   assemblies:
   - Caesar.Core
@@ -164,7 +164,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetAllReservationsAsync
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 36
   assemblies:
   - Caesar.Core
@@ -195,7 +195,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservationAsync
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 42
   assemblies:
   - Caesar.Core
@@ -232,7 +232,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateReservationAsync
-    path: Caesar.Core/Services/ReservationService.cs
+    path: ../Caesar.Core/Services/ReservationService.cs
     startLine: 48
   assemblies:
   - Caesar.Core

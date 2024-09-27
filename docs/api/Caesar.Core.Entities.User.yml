@@ -22,7 +22,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: User
-    path: Caesar.Core/Entities/User.cs
+    path: ../Caesar.Core/Entities/User.cs
     startLine: 2
   assemblies:
   - Caesar.Core
@@ -57,7 +57,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Id
-    path: Caesar.Core/Entities/User.cs
+    path: ../Caesar.Core/Entities/User.cs
     startLine: 4
   assemblies:
   - Caesar.Core
@@ -86,7 +86,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Username
-    path: Caesar.Core/Entities/User.cs
+    path: ../Caesar.Core/Entities/User.cs
     startLine: 5
   assemblies:
   - Caesar.Core
@@ -115,7 +115,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: PasswordHash
-    path: Caesar.Core/Entities/User.cs
+    path: ../Caesar.Core/Entities/User.cs
     startLine: 6
   assemblies:
   - Caesar.Core
@@ -144,7 +144,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Role
-    path: Caesar.Core/Entities/User.cs
+    path: ../Caesar.Core/Entities/User.cs
     startLine: 7
   assemblies:
   - Caesar.Core

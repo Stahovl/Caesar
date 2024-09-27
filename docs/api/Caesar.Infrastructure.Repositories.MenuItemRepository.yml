@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemRepository
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 8
   assemblies:
   - Caesar.Infrastructure
@@ -61,7 +61,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 12
   assemblies:
   - Caesar.Infrastructure
@@ -93,7 +93,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetByIdAsync
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 17
   assemblies:
   - Caesar.Infrastructure
@@ -130,7 +130,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetAllAsync
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 22
   assemblies:
   - Caesar.Infrastructure
@@ -161,7 +161,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: AddAsync
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 27
   assemblies:
   - Caesar.Infrastructure
@@ -195,7 +195,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateAsync
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 36
   assemblies:
   - Caesar.Infrastructure
@@ -229,7 +229,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteAsync
-    path: Caesar.Infrastructure/Repositories/MenuItemRepository.cs
+    path: ../Caesar.Infrastructure/Repositories/MenuItemRepository.cs
     startLine: 42
   assemblies:
   - Caesar.Infrastructure

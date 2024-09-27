@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DecimalConverter
-    path: Caesar.App/Converters/DecimalConverter.cs
+    path: ../Caesar.App/Converters/DecimalConverter.cs
     startLine: 4
   assemblies:
   - Caesar.App
@@ -57,7 +57,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Convert
-    path: Caesar.App/Converters/DecimalConverter.cs
+    path: ../Caesar.App/Converters/DecimalConverter.cs
     startLine: 6
   assemblies:
   - Caesar.App
@@ -100,7 +100,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ConvertBack
-    path: Caesar.App/Converters/DecimalConverter.cs
+    path: ../Caesar.App/Converters/DecimalConverter.cs
     startLine: 15
   assemblies:
   - Caesar.App

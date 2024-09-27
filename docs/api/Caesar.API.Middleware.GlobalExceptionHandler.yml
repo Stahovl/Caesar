@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GlobalExceptionHandler
-    path: Caesar.API/Middleware/GlobalExceptionHandler.cs
+    path: ../Caesar.API/Middleware/GlobalExceptionHandler.cs
     startLine: 6
   assemblies:
   - Caesar.API
@@ -58,7 +58,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.API/Middleware/GlobalExceptionHandler.cs
+    path: ../Caesar.API/Middleware/GlobalExceptionHandler.cs
     startLine: 10
   assemblies:
   - Caesar.API
@@ -90,7 +90,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: OnException
-    path: Caesar.API/Middleware/GlobalExceptionHandler.cs
+    path: ../Caesar.API/Middleware/GlobalExceptionHandler.cs
     startLine: 15
   assemblies:
   - Caesar.API

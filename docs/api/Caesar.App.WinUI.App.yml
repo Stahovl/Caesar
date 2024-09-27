@@ -21,7 +21,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: App
-    path: Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
+    path: ../Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
     startLine: 40
   assemblies:
   - Caesar.App
@@ -86,7 +86,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.App/Platforms/Windows/App.xaml.cs
+    path: ../Caesar.App/Platforms/Windows/App.xaml.cs
     startLine: 16
   assemblies:
   - Caesar.App
@@ -120,7 +120,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateMauiApp
-    path: Caesar.App/Platforms/Windows/App.xaml.cs
+    path: ../Caesar.App/Platforms/Windows/App.xaml.cs
     startLine: 21
   assemblies:
   - Caesar.App
@@ -157,7 +157,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: InitializeComponent
-    path: Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
+    path: ../Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
     startLine: 47
   assemblies:
   - Caesar.App

@@ -23,7 +23,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginViewModel
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 6
   assemblies:
   - Caesar.App
@@ -65,7 +65,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Username
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 15
   assemblies:
   - Caesar.App
@@ -94,7 +94,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Password
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 21
   assemblies:
   - Caesar.App
@@ -123,7 +123,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ErrorMessage
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 27
   assemblies:
   - Caesar.App
@@ -152,7 +152,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginCommand
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 33
   assemblies:
   - Caesar.App
@@ -181,7 +181,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.App/ViewModels/LoginViewModel.cs
+    path: ../Caesar.App/ViewModels/LoginViewModel.cs
     startLine: 35
   assemblies:
   - Caesar.App

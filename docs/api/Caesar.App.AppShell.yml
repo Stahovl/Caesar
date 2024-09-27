@@ -426,7 +426,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.App/AppShell.xaml.cs
+    path: ../Caesar.App/AppShell.xaml.cs
     startLine: 4
   assemblies:
   - Caesar.App

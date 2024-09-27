@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IAuthService
-    path: Caesar.Core/Interfaces/IAuthService.cs
+    path: ../Caesar.Core/Interfaces/IAuthService.cs
     startLine: 4
   assemblies:
   - Caesar.Core
@@ -45,7 +45,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginAsync
-    path: Caesar.Core/Interfaces/IAuthService.cs
+    path: ../Caesar.Core/Interfaces/IAuthService.cs
     startLine: 6
   assemblies:
   - Caesar.Core
@@ -81,7 +81,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GenerateJwtToken
-    path: Caesar.Core/Interfaces/IAuthService.cs
+    path: ../Caesar.Core/Interfaces/IAuthService.cs
     startLine: 7
   assemblies:
   - Caesar.Core

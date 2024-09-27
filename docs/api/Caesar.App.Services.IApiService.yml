@@ -28,7 +28,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IApiService
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 5
   assemblies:
   - Caesar.App
@@ -53,7 +53,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 7
   assemblies:
   - Caesar.App
@@ -89,7 +89,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetMenuItemsAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 9
   assemblies:
   - Caesar.App
@@ -117,7 +117,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetMenuItemAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 10
   assemblies:
   - Caesar.App
@@ -151,7 +151,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: SaveMenuItemAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 11
   assemblies:
   - Caesar.App
@@ -182,7 +182,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteMenuItemAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 12
   assemblies:
   - Caesar.App
@@ -216,7 +216,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservationsAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 14
   assemblies:
   - Caesar.App
@@ -244,7 +244,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservationAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 15
   assemblies:
   - Caesar.App
@@ -278,7 +278,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateReservationAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 16
   assemblies:
   - Caesar.App
@@ -309,7 +309,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateReservationAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 17
   assemblies:
   - Caesar.App
@@ -340,7 +340,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CancelReservationAsync
-    path: Caesar.App/Services/IApiService.cs
+    path: ../Caesar.App/Services/IApiService.cs
     startLine: 18
   assemblies:
   - Caesar.App

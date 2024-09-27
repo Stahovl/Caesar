@@ -19,7 +19,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MauiProgram
-    path: Caesar.App/MauiProgram.cs
+    path: ../Caesar.App/MauiProgram.cs
     startLine: 7
   assemblies:
   - Caesar.App
@@ -54,7 +54,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateMauiApp
-    path: Caesar.App/MauiProgram.cs
+    path: ../Caesar.App/MauiProgram.cs
     startLine: 9
   assemblies:
   - Caesar.App

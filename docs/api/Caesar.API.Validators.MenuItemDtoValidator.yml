@@ -19,7 +19,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemDtoValidator
-    path: Caesar.API/Validators/MenuItemDtoValidator.cs
+    path: ../Caesar.API/Validators/MenuItemDtoValidator.cs
     startLine: 7
   assemblies:
   - Caesar.API
@@ -89,7 +89,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.API/Validators/MenuItemDtoValidator.cs
+    path: ../Caesar.API/Validators/MenuItemDtoValidator.cs
     startLine: 9
   assemblies:
   - Caesar.API

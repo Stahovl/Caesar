@@ -23,7 +23,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IReservationService
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 4
   assemblies:
   - Caesar.Core
@@ -48,7 +48,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetReservationAsync
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 6
   assemblies:
   - Caesar.Core
@@ -82,7 +82,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetAllReservationsAsync
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 7
   assemblies:
   - Caesar.Core
@@ -110,7 +110,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateReservationAsync
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 8
   assemblies:
   - Caesar.Core
@@ -141,7 +141,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateReservationAsync
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 9
   assemblies:
   - Caesar.Core
@@ -172,7 +172,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteReservationAsync
-    path: Caesar.Core/Interfaces/IReservationService.cs
+    path: ../Caesar.Core/Interfaces/IReservationService.cs
     startLine: 10
   assemblies:
   - Caesar.Core

@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: AuthController
-    path: Caesar.API/Controllers/AuthController.cs
+    path: ../Caesar.API/Controllers/AuthController.cs
     startLine: 6
   assemblies:
   - Caesar.API
@@ -248,7 +248,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.API/Controllers/AuthController.cs
+    path: ../Caesar.API/Controllers/AuthController.cs
     startLine: 13
   assemblies:
   - Caesar.API
@@ -282,7 +282,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Login
-    path: Caesar.API/Controllers/AuthController.cs
+    path: ../Caesar.API/Controllers/AuthController.cs
     startLine: 19
   assemblies:
   - Caesar.API

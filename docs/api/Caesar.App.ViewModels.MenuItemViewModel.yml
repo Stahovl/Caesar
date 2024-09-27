@@ -27,7 +27,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemViewModel
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 7
   assemblies:
   - Caesar.App
@@ -64,7 +64,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Id
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 17
   assemblies:
   - Caesar.App
@@ -93,7 +93,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Name
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 27
   assemblies:
   - Caesar.App
@@ -122,7 +122,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Description
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 37
   assemblies:
   - Caesar.App
@@ -151,7 +151,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Price
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 47
   assemblies:
   - Caesar.App
@@ -180,7 +180,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Category
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 57
   assemblies:
   - Caesar.App
@@ -209,7 +209,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: SaveCommand
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 67
   assemblies:
   - Caesar.App
@@ -238,7 +238,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 69
   assemblies:
   - Caesar.App
@@ -270,7 +270,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: PropertyChanged
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 111
   assemblies:
   - Caesar.App
@@ -301,7 +301,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: OnPropertyChanged
-    path: Caesar.App/ViewModels/MenuItemViewModel.cs
+    path: ../Caesar.App/ViewModels/MenuItemViewModel.cs
     startLine: 113
   assemblies:
   - Caesar.App

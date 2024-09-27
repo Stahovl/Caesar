@@ -18,7 +18,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Program
-    path: Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
+    path: ../Caesar.App/obj/Release/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.g.i.cs
     startLine: 17
   assemblies:
   - Caesar.App

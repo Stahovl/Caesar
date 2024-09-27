@@ -23,7 +23,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CaesarDbContext
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 11
   assemblies:
   - Caesar.Infrastructure
@@ -120,7 +120,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 17
   assemblies:
   - Caesar.Infrastructure
@@ -155,7 +155,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Reservations
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 22
   assemblies:
   - Caesar.Infrastructure
@@ -186,7 +186,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItems
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 27
   assemblies:
   - Caesar.Infrastructure
@@ -217,7 +217,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Users
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 32
   assemblies:
   - Caesar.Infrastructure
@@ -248,7 +248,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: OnModelCreating
-    path: Caesar.Infrastructure/Data/CaesarDbContext.cs
+    path: ../Caesar.Infrastructure/Data/CaesarDbContext.cs
     startLine: 39
   assemblies:
   - Caesar.Infrastructure

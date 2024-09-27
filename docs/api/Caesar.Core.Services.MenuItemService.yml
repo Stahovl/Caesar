@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemService
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 7
   assemblies:
   - Caesar.Core
@@ -61,7 +61,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 11
   assemblies:
   - Caesar.Core
@@ -93,7 +93,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetMenuItemAsync
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 16
   assemblies:
   - Caesar.Core
@@ -130,7 +130,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetAllMenuItemsAsync
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 22
   assemblies:
   - Caesar.Core
@@ -161,7 +161,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateMenuItemAsync
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 28
   assemblies:
   - Caesar.Core
@@ -195,7 +195,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateMenuItemAsync
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 42
   assemblies:
   - Caesar.Core
@@ -229,7 +229,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteMenuItemAsync
-    path: Caesar.Core/Services/MenuItemService.cs
+    path: ../Caesar.Core/Services/MenuItemService.cs
     startLine: 48
   assemblies:
   - Caesar.Core

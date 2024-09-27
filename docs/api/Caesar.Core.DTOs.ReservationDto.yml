@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ReservationDto
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 2
   assemblies:
   - Caesar.Core
@@ -59,7 +59,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Id
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 4
   assemblies:
   - Caesar.Core
@@ -88,7 +88,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Date
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 5
   assemblies:
   - Caesar.Core
@@ -117,7 +117,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: Time
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 6
   assemblies:
   - Caesar.Core
@@ -146,7 +146,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: NumberOfGuests
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 7
   assemblies:
   - Caesar.Core
@@ -175,7 +175,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CustomerName
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 8
   assemblies:
   - Caesar.Core
@@ -204,7 +204,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ContactNumber
-    path: Caesar.Core/DTOs/ReservationDto.cs
+    path: ../Caesar.Core/DTOs/ReservationDto.cs
     startLine: 9
   assemblies:
   - Caesar.Core

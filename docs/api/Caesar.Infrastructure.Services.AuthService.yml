@@ -25,7 +25,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: AuthService
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 12
   assemblies:
   - Caesar.Infrastructure
@@ -62,7 +62,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 17
   assemblies:
   - Caesar.Infrastructure
@@ -96,7 +96,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: LoginAsync
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 23
   assemblies:
   - Caesar.Infrastructure
@@ -135,7 +135,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GenerateJwtToken
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 36
   assemblies:
   - Caesar.Infrastructure
@@ -169,7 +169,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetTokenAsync
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 61
   assemblies:
   - Caesar.Infrastructure
@@ -197,7 +197,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: SetTokenAsync
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 62
   assemblies:
   - Caesar.Infrastructure
@@ -231,7 +231,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ClearTokenAsync
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 63
   assemblies:
   - Caesar.Infrastructure
@@ -259,7 +259,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IsAuthenticated
-    path: Caesar.Infrastructure/Services/AuthService.cs
+    path: ../Caesar.Infrastructure/Services/AuthService.cs
     startLine: 64
   assemblies:
   - Caesar.Infrastructure

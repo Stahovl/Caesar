@@ -22,7 +22,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: BaseViewModel
-    path: Caesar.App/ViewModels/BaseViewModel.cs
+    path: ../Caesar.App/ViewModels/BaseViewModel.cs
     startLine: 5
   assemblies:
   - Caesar.App
@@ -63,7 +63,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IsBusy
-    path: Caesar.App/ViewModels/BaseViewModel.cs
+    path: ../Caesar.App/ViewModels/BaseViewModel.cs
     startLine: 9
   assemblies:
   - Caesar.App
@@ -92,7 +92,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: PropertyChanged
-    path: Caesar.App/ViewModels/BaseViewModel.cs
+    path: ../Caesar.App/ViewModels/BaseViewModel.cs
     startLine: 15
   assemblies:
   - Caesar.App
@@ -123,7 +123,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: OnPropertyChanged
-    path: Caesar.App/ViewModels/BaseViewModel.cs
+    path: ../Caesar.App/ViewModels/BaseViewModel.cs
     startLine: 17
   assemblies:
   - Caesar.App
@@ -155,7 +155,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: SetProperty
-    path: Caesar.App/ViewModels/BaseViewModel.cs
+    path: ../Caesar.App/ViewModels/BaseViewModel.cs
     startLine: 22
   assemblies:
   - Caesar.App

@@ -22,7 +22,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: TokenService
-    path: Caesar.App/Services/TokenService.cs
+    path: ../Caesar.App/Services/TokenService.cs
     startLine: 4
   assemblies:
   - Caesar.App
@@ -59,7 +59,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: IsAuthenticatedAsync
-    path: Caesar.App/Services/TokenService.cs
+    path: ../Caesar.App/Services/TokenService.cs
     startLine: 8
   assemblies:
   - Caesar.App
@@ -90,7 +90,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: SetTokenAsync
-    path: Caesar.App/Services/TokenService.cs
+    path: ../Caesar.App/Services/TokenService.cs
     startLine: 14
   assemblies:
   - Caesar.App
@@ -127,7 +127,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetTokenAsync
-    path: Caesar.App/Services/TokenService.cs
+    path: ../Caesar.App/Services/TokenService.cs
     startLine: 19
   assemblies:
   - Caesar.App
@@ -158,7 +158,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: ClearTokenAsync
-    path: Caesar.App/Services/TokenService.cs
+    path: ../Caesar.App/Services/TokenService.cs
     startLine: 24
   assemblies:
   - Caesar.App

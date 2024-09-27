@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/GitRepos/Caesar",
+  "source_base_path": "D:/GitRepos/Caesar/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,26 +9,6 @@
           "relative_path": "index.json"
         }
       }
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Caesar.Web/wwwroot/lib/jquery-validation/LICENSE.md",
-      "output": {
-        ".html": {
-          "relative_path": "Caesar.Web/wwwroot/lib/jquery-validation/LICENSE.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -709,6 +689,39 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""

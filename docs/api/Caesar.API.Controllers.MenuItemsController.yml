@@ -24,7 +24,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: MenuItemsController
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 9
   assemblies:
   - Caesar.API
@@ -259,7 +259,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: .ctor
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 17
   assemblies:
   - Caesar.API
@@ -293,7 +293,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetMenuItem
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 23
   assemblies:
   - Caesar.API
@@ -331,7 +331,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: GetMenuItem
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 36
   assemblies:
   - Caesar.API
@@ -377,7 +377,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: CreateMenuItem
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 47
   assemblies:
   - Caesar.API
@@ -418,7 +418,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: UpdateMenuItem
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 56
   assemblies:
   - Caesar.API
@@ -466,7 +466,7 @@ items:
       branch: master
       repo: https://github.com/Stahovl/Caesar.git
     id: DeleteMenuItem
-    path: Caesar.API/Controllers/MenuItemsController.cs
+    path: ../Caesar.API/Controllers/MenuItemsController.cs
     startLine: 70
   assemblies:
   - Caesar.API
