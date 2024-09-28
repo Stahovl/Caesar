@@ -6,15 +6,27 @@ using System.Text.Json;
 
 namespace Caesar.Infrastructure.Repositories;
 
+/// <summary>
+/// Repository for managing MenuItem entities in the database.
+/// </summary>
 public class MenuItemRepository : IMenuItemRepository
 {
     private readonly CaesarDbContext _context;
 
+    /// <summary>
+    /// Constructor that initializes the database context.
+    /// </summary>
+    /// <param name="context">The database context.</param>
     public MenuItemRepository(CaesarDbContext context)
     {
         _context = context;
     }
 
+    /// <summary>
+    /// Asynchronously gets a MenuItem entity by its ID.
+    /// </summary>
+    /// <param name="id">The ID of the entity.</param>
+    /// <returns>The MenuItem entity.</returns>
     public async Task<MenuItem> GetByIdAsync(int id)
     {
         return await _context.MenuItems.FindAsync(id);
