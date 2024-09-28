@@ -35,6 +35,9 @@ jobs:
     - run: dotnet tool update -g docfx
     - run: docfx doc/docfx.json
 
+    - name: Disable Jekyll
+      run: echo "" > doc/_site/.nojekyll
+      
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
