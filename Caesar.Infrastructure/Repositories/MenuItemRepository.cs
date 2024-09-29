@@ -32,11 +32,32 @@ public class MenuItemRepository : IMenuItemRepository
         return await _context.MenuItems.FindAsync(id);
     }
 
+    /// <summary>
+    /// Asynchronously gets a MenuItem list by its IDs.
+    /// </summary>
+    /// <param name="ids">The ID of the list.</param>
+    /// <returns>The MenuItem list.</returns>
+    public async Task<List<MenuItem>> GetMenuItemsByIdsAsync(List<int> ids)
+    {
+        return await _context.MenuItems
+            .Where(item => ids.Contains(item.Id))
+            .ToListAsync();
+    }
+
+    /// <summary>
+    /// Asynchronously gets all MenuItem like list.
+    /// </summary>
+    /// <returns>The MenuItem list.</returns>
     public async Task<IEnumerable<MenuItem>> GetAllAsync()
     {
         return await _context.MenuItems.ToListAsync();
     }
 
+    /// <summary>
+    /// Asynchronously add a MenuItem.
+    /// </summary>
+    /// <param name="menuItem">Object for add.</param>
+    /// <returns>The Task MenuItem </returns>
     public async Task<MenuItem> AddAsync(MenuItem menuItem)
     {
         Console.WriteLine($"Adding MenuItem: {JsonSerializer.Serialize(menuItem)}");

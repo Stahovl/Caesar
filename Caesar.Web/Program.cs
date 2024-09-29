@@ -4,6 +4,9 @@ using Caesar.Infrastructure.Data;
 using Caesar.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Caesar.Web.Validators;
 
 namespace Caesar.Web;
 
@@ -29,6 +32,21 @@ public class Program
                 options.AccessDeniedPath = "/Account/AccessDenied";
             });
 
+        // Session
+        builder.Services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromMinutes(30);
+            options.Cookie.HttpOnly = true;
+            options.Cookie.IsEssential = true;
+        });
+
+        // FluentValidation setup
+        builder.Services.AddFluentValidationAutoValidation();
+        builder.Services.AddFluentValidationClientsideAdapters();
+        builder.Services.AddValidatorsFromAssemblyContaining<RegisterViewModelValidator>();
+        builder.Services.AddValidatorsFromAssemblyContaining<LoginViewModelValidator>();
+
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -45,9 +63,11 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
 
+        app.UseSession();
+
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Menu}/{action=Index}/{id?}");
 
         app.Run();
     }

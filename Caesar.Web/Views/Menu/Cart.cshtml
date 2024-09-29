@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Caesar.Web.Models.MenuItemViewModel>
+
+<h1>Your Cart</h1>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <img src="@item.ImageUrl" alt="@item.Name" width="50" height="50" />
+                <strong>@item.Name</strong> - @item.Price.ToString("C")
+            </li>
+        }
+    </ul>
+
+    <form asp-action="Checkout" method="post">
+        <button type="submit" class="btn btn-success">Proceed to Checkout</button>
+    </form>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}

@@ -20,6 +20,11 @@ public class MenuItemService : IMenuItemService
         return menuItem != null ? MapToDto(menuItem) : null;
     }
 
+    public async Task<List<MenuItem>> GetMenuItemsByIdsAsync(List<int> ids)
+    {
+        return await _repository.GetMenuItemsByIdsAsync(ids);
+    }
+
     public async Task<IEnumerable<MenuItemDto>> GetAllMenuItemsAsync()
     {
         var menuItems = await _repository.GetAllAsync();

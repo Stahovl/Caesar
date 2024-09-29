@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using Caesar.Core.Entities;
+using Caesar.Web.Models;
 
 namespace Caesar.Web.Controllers;
 
@@ -68,7 +69,7 @@ public class AccountController : Controller
             if (user != null && BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
             {
                 await LoginUser(user);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Cart", "Menu");
             }
 
             ModelState.AddModelError("", "Invalid username or password");
@@ -105,17 +106,3 @@ public class AccountController : Controller
             authProperties);
     }
 }
-
-public class RegisterViewModel
-{
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public string ConfirmPassword { get; set; }
-}
-
-public class LoginViewModel
-{
-    public string Username { get; set; }
-    public string Password { get; set; }
-}
-

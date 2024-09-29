@@ -20,16 +20,30 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Menu" asp-action="Index">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Index">My Reservations</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Menu" asp-action="Cart">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+                        </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <!-- Проверка на аутентификацию -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                            <button type="submit" class="btn btn-link nav-link text-dark">Logout</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <button class="btn btn-link nav-link text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    }
+                    <partial name="_LoginPartial" model="new Caesar.Web.Models.LoginViewModel()" />
+
                 </div>
             </div>
         </nav>
@@ -42,7 +56,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Caesar Restaurant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - Caesar Restaurant
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
