@@ -16,6 +16,7 @@ public static class InfrastructureServiceRegistration
 
         services.AddScoped<IReservationRepository, ReservationRepository>();
         services.AddScoped<IMenuItemRepository, MenuItemRepository>(); 
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         return services;
     }

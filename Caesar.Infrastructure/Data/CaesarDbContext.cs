@@ -28,6 +28,16 @@ public class CaesarDbContext : DbContext
     public DbSet<MenuItem> MenuItems { get; set; }
 
     /// <summary>
+    /// Gets or sets the Order table.
+    /// </summary>
+    public DbSet<Order> Orders { get; set; }
+
+    /// <summary>
+    /// Gets or sets the OrderItems table.
+    /// </summary>
+    public DbSet<OrderItem> OrderItems { get; set; }
+
+    /// <summary>
     /// Gets or sets the Users table.
     /// </summary>
     public DbSet<User> Users { get; set; }
@@ -49,6 +59,20 @@ public class CaesarDbContext : DbContext
             .Property(m => m.ImageUrl)
             .HasMaxLength(500)
             .IsRequired(false);
+
+        modelBuilder.Entity<Order>()
+            .HasMany(o => o.OrderItems)
+            .WithOne()
+            .HasForeignKey(oi => oi.OrderId);
+
+        modelBuilder.Entity<OrderItem>()
+            .HasOne(oi => oi.MenuItem)
+            .WithMany()
+            .HasForeignKey(oi => oi.MenuItemId);
+
+        modelBuilder.Entity<Order>()
+            .Property(o => o.TotalPrice)
+            .HasColumnType("decimal(18,2)");
 
         modelBuilder.Entity<User>().HasData(
             new User
