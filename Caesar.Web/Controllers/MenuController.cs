@@ -46,6 +46,13 @@ public class MenuController : Controller
         return RedirectToAction("Cart");
     }
 
+    [HttpPost]
+    public IActionResult ClearCart()
+    {
+        HttpContext.Session.Remove("Cart");
+        return RedirectToAction("Index");
+    }
+
     // View the cart
     public async Task<IActionResult> Cart()
     {

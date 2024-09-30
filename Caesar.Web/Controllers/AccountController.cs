@@ -47,7 +47,7 @@ public class AccountController : Controller
 
             await LoginUser(user);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Menu");
         }
 
         return View(model);
@@ -81,7 +81,7 @@ public class AccountController : Controller
     public async Task<IActionResult> Logout()
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "Menu");
     }
 
     private async Task LoginUser(User user)

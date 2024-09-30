@@ -7,10 +7,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/css/styles.css" />
-    <title>Меню</title>
+    <title>Menu</title>
 </head>
 <body>
-    <h1>Меню</h1>
+    <h1>Menu</h1>
 
     <div class="menu-items">
         @foreach (var item in Model)
@@ -23,7 +23,7 @@
 
                 <form asp-action="AddToCart" method="post">
                     <input type="hidden" name="itemId" value="@item.Id" />
-                    <button type="submit" class="btn btn-primary">Добавить в корзину</button>
+                    <button type="submit" class="btn btn-primary">Add to cart</button>
                 </form>
             </div>
         }
