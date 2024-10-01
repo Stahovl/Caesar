@@ -33,7 +33,7 @@ public class OrderRepository : IOrderRepository
             OrderItems = menuItemIds.Select(itemId => new OrderItem
             {
                 MenuItemId = itemId,
-                Quantity = 1 // You might want to add logic for quantity
+                Quantity = 1 // Might add logic for quantity
             }).ToList(),
             TotalPrice = menuItems.Sum(item => item.Price)
         };
@@ -71,14 +71,23 @@ public class OrderRepository : IOrderRepository
     public async Task UpdateOrderAsync(Order order)
     {
         _context.Entry(order).State = EntityState.Modified;
+        foreach (var item in order.OrderItems)
+        {
+            _context.Entry(item).State = item.Id == 0 ? EntityState.Added : EntityState.Modified;
+        }
         await _context.SaveChangesAsync();
     }
 
+
     public async Task DeleteOrderAsync(int orderId)
     {
-        var order = await _context.Orders.FindAsync(orderId);
+        var order = await _context.Orders
+            .Include(o => o.OrderItems)
+            .FirstOrDefaultAsync(o => o.Id == orderId);
+
         if (order != null)
         {
+            _context.OrderItems.RemoveRange(order.OrderItems);
             _context.Orders.Remove(order);
             await _context.SaveChangesAsync();
         }
