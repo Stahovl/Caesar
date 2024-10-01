@@ -1,9 +1,10 @@
-﻿using Caesar.Core.Entities;
+﻿using Caesar.Core.DTOs;
+using Caesar.Core.Entities;
 
 namespace Caesar.Core.Interfaces;
 
 public interface IOrderService
 {
     public Task<Order> CreateOrderForReservationAsync(int reservationId, List<int> menuItemIds);
-    public Task<Order> GetOrderByReservationIdAsync(int reservationId);
+    public Task<OrderDto> GetOrderByReservationIdAsync(int reservationId);
 }
