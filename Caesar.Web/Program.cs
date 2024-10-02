@@ -19,9 +19,16 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
-        builder.Services.AddScoped<IMenuItemService, MenuItemService>();
+        // Register repositories
         builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+        builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+        builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
+
+        // Register services
+        builder.Services.AddScoped<IMenuItemService, MenuItemService>();
         builder.Services.AddScoped<IOrderService, OrderService>();
+        builder.Services.AddScoped<IReservationService, ReservationService>();
+
 
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

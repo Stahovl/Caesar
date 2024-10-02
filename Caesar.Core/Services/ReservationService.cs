@@ -63,12 +63,16 @@ public class ReservationService : IReservationService
         await _repository.UpdateAsync(reservation);
     }
 
-    public async Task<IEnumerable<DateTime>> GetAvailableSlotsAsync(DateTime startDate, DateTime endDate)
-    {
-        // Реализация этого метода зависит от вашей бизнес-логики
-        // Здесь должна быть логика для определения доступных слотов
-        throw new NotImplementedException();
+ public async Task<IEnumerable<DateTime>> GetAvailableSlotsAsync(DateTime startDate, DateTime endDate)
+{
+        var openingTime = new TimeSpan(9, 0, 0);
+        var closingTime = new TimeSpan(22, 0, 0);
+
+        // Вызов метода репозитория для получения доступных слотов
+        var availableSlots = await _repository.GetAvailableSlotsAsync(startDate.Date.Add(openingTime), endDate.Date.Add(closingTime));
+        return availableSlots;
     }
+
 
     private static ReservationDto MapToDto(Reservation reservation)
     {
