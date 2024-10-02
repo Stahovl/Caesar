@@ -75,4 +75,48 @@ public class ReservationRepository : IReservationRepository
             await _context.SaveChangesAsync();
         }
     }
+
+    /// <summary>
+    /// Asynchronously gets all Reservation entities for a specific user.
+    /// </summary>
+    /// <param name="userId">The ID of the user.</param>
+    /// <returns>A list of Reservation entities for the specified user.</returns>
+    public async Task<IEnumerable<Reservation>> GetByUserIdAsync(string userId)
+    {
+        return await _context.Reservations
+            .Where(r => r.UserId == userId)
+            .ToListAsync();
+    }
+
+    /// <summary>
+    /// Asynchronously gets available time slots for reservations within a date range.
+    /// </summary>
+    /// <param name="startDate">The start date of the range.</param>
+    /// <param name="endDate">The end date of the range.</param>
+    /// <returns>A list of available DateTime slots.</returns>
+    public async Task<IEnumerable<DateTime>> GetAvailableSlotsAsync(DateTime startDate, DateTime endDate)
+    {
+        // Предполагаем, что ресторан работает с 11:00 до 22:00
+        var openingTime = new TimeSpan(11, 0, 0);
+        var closingTime = new TimeSpan(22, 0, 0);
+        var slotDuration = TimeSpan.FromHours(1); // Предполагаем, что каждый слот длится 1 час
+
+        var allPossibleSlots = new List<DateTime>();
+        for (var date = startDate.Date; date <= endDate.Date; date = date.AddDays(1))
+        {
+            var currentTime = openingTime;
+            while (currentTime <= closingTime.Subtract(slotDuration))
+            {
+                allPossibleSlots.Add(date.Add(currentTime));
+                currentTime = currentTime.Add(slotDuration);
+            }
+        }
+
+        var bookedSlots = await _context.Reservations
+            .Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate)
+            .Select(r => r.ReservationDate.Add(r.ReservationTime))
+            .ToListAsync();
+
+        return allPossibleSlots.Except(bookedSlots);
+    }
 }

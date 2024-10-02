@@ -18,13 +18,11 @@ public class ReservationService : IReservationService
     {
         var reservation = new Reservation
         {
-            Date = reservationDto.Date,
-            Time = reservationDto.Time,
-            NumberOfGuests = reservationDto.NumberOfGuests,
-            CustomerName = reservationDto.CustomerName,
-            ContactNumber = reservationDto.ContactNumber
+            UserId = reservationDto.UserId,
+            ReservationDate = reservationDto.ReservationDate,
+            ReservationTime = reservationDto.ReservationTime,
+            NumberOfGuests = reservationDto.NumberOfGuests
         };
-
         var createdReservation = await _repository.AddAsync(reservation);
         return MapToDto(createdReservation);
     }
@@ -40,10 +38,16 @@ public class ReservationService : IReservationService
         return reservations.Select(MapToDto);
     }
 
-    public async Task<ReservationDto> GetReservationAsync(int id)
+    public async Task<ReservationDto> GetReservationByIdAsync(int id)
     {
         var reservation = await _repository.GetByIdAsync(id);
         return reservation != null ? MapToDto(reservation) : null;
+    }
+
+    public async Task<IEnumerable<ReservationDto>> GetReservationsByUserIdAsync(string userId)
+    {
+        var reservations = await _repository.GetByUserIdAsync(userId);
+        return reservations.Select(MapToDto);
     }
 
     public async Task UpdateReservationAsync(ReservationDto reservationDto)
@@ -51,14 +55,19 @@ public class ReservationService : IReservationService
         var reservation = new Reservation
         {
             Id = reservationDto.Id,
-            Date = reservationDto.Date,
-            Time = reservationDto.Time,
-            NumberOfGuests = reservationDto.NumberOfGuests,
-            CustomerName = reservationDto.CustomerName,
-            ContactNumber = reservationDto.ContactNumber
+            UserId = reservationDto.UserId,
+            ReservationDate = reservationDto.ReservationDate,
+            ReservationTime = reservationDto.ReservationTime,
+            NumberOfGuests = reservationDto.NumberOfGuests
         };
-
         await _repository.UpdateAsync(reservation);
+    }
+
+    public async Task<IEnumerable<DateTime>> GetAvailableSlotsAsync(DateTime startDate, DateTime endDate)
+    {
+        // Реализация этого метода зависит от вашей бизнес-логики
+        // Здесь должна быть логика для определения доступных слотов
+        throw new NotImplementedException();
     }
 
     private static ReservationDto MapToDto(Reservation reservation)
@@ -66,11 +75,10 @@ public class ReservationService : IReservationService
         return new ReservationDto
         {
             Id = reservation.Id,
-            Date = reservation.Date,
-            Time = reservation.Time,
-            NumberOfGuests = reservation.NumberOfGuests,
-            CustomerName = reservation.CustomerName,
-            ContactNumber = reservation.ContactNumber
+            UserId = reservation.UserId,
+            ReservationDate = reservation.ReservationDate,
+            ReservationTime = reservation.ReservationTime,
+            NumberOfGuests = reservation.NumberOfGuests
         };
     }
 }

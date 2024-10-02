@@ -25,7 +25,7 @@ public class ReservationsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<ReservationDto>> GetReservation(int id)
     {
-        var reservation = await _reservationService.GetReservationAsync(id);
+        var reservation = await _reservationService.GetReservationByIdAsync(id);
         if (reservation == null)
         {
             return NotFound();

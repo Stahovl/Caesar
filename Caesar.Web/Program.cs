@@ -21,6 +21,7 @@ public class Program
 
         builder.Services.AddScoped<IMenuItemService, MenuItemService>();
         builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+        builder.Services.AddScoped<IOrderService, OrderService>();
 
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

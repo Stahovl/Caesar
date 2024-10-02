@@ -22,8 +22,8 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Date.ToShortDateString()</td>
-                <td>@item.Time.ToString(@"hh\:mm")</td>
+                <td>@item.ReservationDate.ToShortDateString()</td>
+                <td>@item.ReservationTime.ToString(@"hh\:mm")</td>
                 <td>@item.NumberOfGuests</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>

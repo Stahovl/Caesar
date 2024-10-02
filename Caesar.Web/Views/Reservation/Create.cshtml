@@ -1,5 +1,4 @@
-﻿@model Caesar.Core.Entities.Reservation
-
+﻿@model Caesar.Web.Models.CreateReservationViewModel
 @{
     ViewData["Title"] = "Create Reservation";
 }
@@ -8,21 +7,46 @@
 
 <form asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
     <div class="form-group">
-        <label asp-for="Date" class="control-label"></label>
-        <input asp-for="Date" class="form-control" type="date" />
-        <span asp-validation-for="Date" class="text-danger"></span>
+        <label asp-for="SelectedDate" class="control-label">Date</label>
+        <select asp-for="SelectedDate" class="form-control">
+            @foreach (var slot in Model.AvailableSlots)
+            {
+                <option value="@slot.Date.ToString("yyyy-MM-dd")">@slot.Date.ToString("dddd, MMMM d, yyyy")</option>
+            }
+        </select>
+        <span asp-validation-for="SelectedDate" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label asp-for="Time" class="control-label"></label>
-        <input asp-for="Time" class="form-control" type="time" />
-        <span asp-validation-for="Time" class="text-danger"></span>
+        <label asp-for="SelectedTime" class="control-label">Time</label>
+        <select asp-for="SelectedTime" class="form-control">
+            @foreach (var slot in Model.AvailableSlots)
+            {
+                <option value="@slot.TimeOfDay.ToString(@"hh\:mm")">@slot.ToString("h:mm tt")</option>
+            }
+        </select>
+        <span asp-validation-for="SelectedTime" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label asp-for="NumberOfGuests" class="control-label"></label>
+        <label asp-for="NumberOfGuests" class="control-label">Number of Guests</label>
         <input asp-for="NumberOfGuests" class="form-control" />
         <span asp-validation-for="NumberOfGuests" class="text-danger"></span>
     </div>
+
+    @if (Model.CartItems.Any())
+    {
+        <h3>Selected Menu Items</h3>
+        <ul>
+            @foreach (var item in Model.CartItems)
+            {
+                <li>@item.Name - @item.Price.ToString("C")</li>
+            }
+        </ul>
+    }
+
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
@@ -34,4 +58,8 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Добавьте здесь JavaScript для динамического обновления доступных временных слотов
+        // в зависимости от выбранной даты, если это необходимо
+    </script>
 }

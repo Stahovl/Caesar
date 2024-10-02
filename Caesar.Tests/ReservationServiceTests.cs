@@ -19,11 +19,9 @@ public class ReservationServiceTests
         var service = new ReservationService(mockRepo.Object);
         var reservationDto = new ReservationDto
         {
-            Date = DateTime.Today.AddDays(1),
-            Time = new TimeSpan(18, 0, 0),
+            ReservationDate = DateTime.Today.AddDays(1),
+            ReservationTime = new TimeSpan(18, 0, 0),
             NumberOfGuests = 2,
-            CustomerName = "John Doe",
-            ContactNumber = "+1234567890"
         };
 
         // Act
@@ -31,7 +29,7 @@ public class ReservationServiceTests
 
         // Assert
         Assert.NotNull(result);
-        Assert.Equal(reservationDto.CustomerName, result.CustomerName);
+        Assert.Equal(reservationDto.ReservationDate, result.ReservationDate);
         Assert.Equal(reservationDto.NumberOfGuests, result.NumberOfGuests);
     }
 }
