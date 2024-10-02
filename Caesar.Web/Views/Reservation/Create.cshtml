@@ -8,28 +8,32 @@
 <form asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+    <!-- Show date -->
     <div class="form-group">
         <label asp-for="SelectedDate" class="control-label">Date</label>
         <select asp-for="SelectedDate" class="form-control">
-            @foreach (var slot in Model.AvailableSlots)
+            @foreach (var date in Model.AvailableSlots.Select(slot => slot.Date).Distinct())
             {
-                <option value="@slot.Date.ToString("yyyy-MM-dd")">@slot.Date.ToString("dddd, MMMM d, yyyy")</option>
+                <option value="@date.ToString("yyyy-MM-dd")">@date.ToString("dddd, MMMM d, yyyy")</option>
             }
         </select>
         <span asp-validation-for="SelectedDate" class="text-danger"></span>
     </div>
 
+    <!-- Time for every date -->
     <div class="form-group">
         <label asp-for="SelectedTime" class="control-label">Time</label>
         <select asp-for="SelectedTime" class="form-control">
-            @foreach (var slot in Model.AvailableSlots)
+            @foreach (var time in Model.AvailableSlots.Select(slot => slot.TimeOfDay).Distinct())
             {
-                <option value="@slot.TimeOfDay.ToString(@"hh\:mm")">@slot.ToString("h:mm tt")</option>
+                <option value="@time.ToString(@"hh\:mm")">@time.ToString(@"hh\:mm")</option>
             }
         </select>
         <span asp-validation-for="SelectedTime" class="text-danger"></span>
     </div>
 
+
+    <!-- Guest count -->
     <div class="form-group">
         <label asp-for="NumberOfGuests" class="control-label">Number of Guests</label>
         <input asp-for="NumberOfGuests" class="form-control" />
@@ -55,11 +59,3 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script>
-        // Добавьте здесь JavaScript для динамического обновления доступных временных слотов
-        // в зависимости от выбранной даты, если это необходимо
-    </script>
-}
