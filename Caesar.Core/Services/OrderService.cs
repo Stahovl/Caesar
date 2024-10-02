@@ -7,8 +7,8 @@ namespace Caesar.Core.Services;
 public class OrderService : IOrderService
 {
     private readonly IOrderRepository _repository;
-    private readonly IMenuItemRepository _menuItemRepository; // Чтобы получить информацию о позициях меню
-    private readonly IReservationRepository _reservationRepository; // Для проверки существования бронирования
+    private readonly IMenuItemRepository _menuItemRepository;
+    private readonly IReservationRepository _reservationRepository; 
 
     public OrderService(IOrderRepository repository, IMenuItemRepository menuItemRepository, IReservationRepository reservationRepository)
     {
@@ -26,29 +26,8 @@ public class OrderService : IOrderService
             throw new Exception($"Reservation with ID {reservationId} not found.");
         }
 
-        // Получаем все позиции меню, соответствующие переданным идентификаторам
-        var menuItems = await _menuItemRepository.GetMenuItemsByIdsAsync(menuItemIds);
-        if (menuItems == null || !menuItems.Any())
-        {
-            throw new Exception("Invalid menu items.");
-        }
-
-        // Создаем заказ
-        var order = new Order
-        {
-            ReservationId = reservationId,
-            OrderItems = menuItems.Select(menuItem => new OrderItem
-            {
-                MenuItemId = menuItem.Id,
-                Quantity = 1 // Предположим, что по умолчанию количество 1
-            }).ToList(),
-            TotalPrice = menuItems.Sum(menuItem => menuItem.Price) // Подсчет итоговой цены
-        };
-
-        // Сохраняем заказ в базе данных, используя метод репозитория
-        await _repository.CreateOrderForReservationAsync(reservationId, menuItemIds);
-
-        // Возвращаем созданный заказ
+        // Создаем заказ через репозиторий
+        var order = await _repository.CreateOrderForReservationAsync(reservationId, menuItemIds);
         return order;
     }
 
@@ -69,9 +48,9 @@ public class OrderService : IOrderService
                 Id = item.Id,
                 MenuItemId = item.MenuItemId,
                 Quantity = item.Quantity,
-                Price = item.Price // Используем правильную цену
+                Price = item.Price 
             }).ToList(),
-            TotalPrice = order.TotalPrice // Используем TotalPrice из заказа
+            TotalPrice = order.TotalPrice 
         };
     }
 }

@@ -30,10 +30,11 @@ public class OrderRepository : IOrderRepository
         var order = new Order
         {
             ReservationId = reservationId,
-            OrderItems = menuItemIds.Select(itemId => new OrderItem
+            OrderItems = menuItems.Select(menuItem => new OrderItem
             {
-                MenuItemId = itemId,
-                Quantity = 1 // Might add logic for quantity
+                MenuItemId = menuItem.Id,
+                Quantity = 1, // Возможно, добавь логику для указания количества
+                Price = menuItem.Price
             }).ToList(),
             TotalPrice = menuItems.Sum(item => item.Price)
         };

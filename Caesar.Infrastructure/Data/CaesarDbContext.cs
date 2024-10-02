@@ -65,6 +65,11 @@ public class CaesarDbContext : DbContext
             .WithOne()
             .HasForeignKey(oi => oi.OrderId);
 
+        modelBuilder.Entity<Order>()
+            .HasMany(o => o.OrderItems)
+            .WithOne(oi => oi.Order)
+            .HasForeignKey(oi => oi.OrderId);
+
         modelBuilder.Entity<OrderItem>()
             .HasOne(oi => oi.MenuItem)
             .WithMany()
