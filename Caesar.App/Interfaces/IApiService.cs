@@ -1,7 +1,7 @@
 ﻿using Caesar.App.Models;
 using Caesar.Core.DTOs;
 
-namespace Caesar.App.Services;
+namespace Caesar.App.Interfaces;
 
 public interface IApiService
 {

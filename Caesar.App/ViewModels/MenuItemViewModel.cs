@@ -1,7 +1,7 @@
 ﻿using Caesar.Core.DTOs;
-using Caesar.App.Services;
 using System.ComponentModel;
 using System.Windows.Input;
+using Caesar.App.Interfaces;
 
 namespace Caesar.App.ViewModels;
 

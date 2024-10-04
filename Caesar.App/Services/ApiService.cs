@@ -3,6 +3,7 @@ using System.Net.Http.Headers;
 using Caesar.Core.DTOs;
 using Caesar.App.Models;
 using System.Diagnostics;
+using Caesar.App.Interfaces;
 
 namespace Caesar.App.Services;
 
@@ -12,6 +13,7 @@ public class ApiService : IApiService
     private readonly ITokenService _tokenService;
 
     private readonly string _baseUrl = "https://localhost:7114/api/";
+
     public ApiService(ITokenService tokenService)
     {
         _httpClient = new HttpClient();
@@ -168,6 +170,4 @@ public class ApiService : IApiService
         var response = await _httpClient.DeleteAsync($"{_baseUrl}reservations/{id}");
         return response.IsSuccessStatusCode;
     }
-
-
 }

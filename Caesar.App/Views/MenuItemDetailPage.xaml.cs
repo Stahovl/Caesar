@@ -1,4 +1,4 @@
-using Caesar.App.Services;
+using Caesar.App.Interfaces;
 using Caesar.App.ViewModels;
 
 namespace Caesar.App.Views;

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Windows.Input;
-using Caesar.App.Services;
+using Caesar.App.Interfaces;
 
 namespace Caesar.App.ViewModels;
 

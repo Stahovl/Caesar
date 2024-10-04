@@ -20,7 +20,9 @@
                            Margin="10" />
                     <Button Text="Add Menu Item"
                             Command="{Binding AddMenuItemCommand}"
-                            Margin="10" />
+                            Margin="10"
+                            MaximumWidthRequest="400"
+                            HorizontalOptions="Start"/>
                     <CollectionView ItemsSource="{Binding MenuItems}"
                                     SelectionMode="Single"
                                     SelectedItem="{Binding SelectedMenuItem}">
@@ -33,8 +35,8 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Image Source="{Binding ImageUrl}"
-                                           WidthRequest="50"
-                                           HeightRequest="50"
+                                           WidthRequest="150"
+                                           HeightRequest="150"
                                            Aspect="AspectFit" />
                                     <StackLayout Grid.Column="1"
                                                  Spacing="0">
@@ -46,7 +48,8 @@
                                                TextColor="Gray" />
                                     </StackLayout>
                                     <StackLayout Grid.Column="2"
-                                                 Orientation="Horizontal">
+                                                 Orientation="Horizontal"
+                                                 MaximumHeightRequest="50">
                                         <Button Text="Edit"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditMenuItemCommand}"
                                                 CommandParameter="{Binding Id}" 
@@ -74,16 +77,16 @@
                     <CollectionView ItemsSource="{Binding Reservations}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Padding="10">
+                                <Grid Padding="10" HorizontalOptions="Center">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="300" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Spacing="0">
-                                        <Label Text="{Binding CustomerName}"
+                                        <Label Text="{Binding UserId}"
                                                FontAttributes="Bold" />
-                                        <Label Text="{Binding Date, StringFormat='{0:d}'}" />
-                                        <Label Text="{Binding Time, StringFormat='{0:t}'}" />
+                                        <Label Text="{Binding ReservationDate, StringFormat='{0:d}'}" />
+                                        <Label Text="{Binding ReservationTime}" />
                                     </StackLayout>
                                     <Label Grid.Column="1"
                                            Text="{Binding NumberOfGuests, StringFormat='{0} guests'}"

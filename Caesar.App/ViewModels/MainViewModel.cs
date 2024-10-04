@@ -1,9 +1,9 @@
 ﻿using Caesar.Core.DTOs;
-using Caesar.App.Services;
 using System.Collections.ObjectModel;
 using Caesar.Core.Interfaces;
 using System.Windows.Input;
 using System.Diagnostics;
+using Caesar.App.Interfaces;
 
 namespace Caesar.App.ViewModels;
 

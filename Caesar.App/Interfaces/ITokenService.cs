@@ -1,4 +1,4 @@
-﻿namespace Caesar.App.Services;
+﻿namespace Caesar.App.Interfaces;
 
 public interface ITokenService
 {

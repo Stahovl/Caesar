@@ -1,4 +1,4 @@
-﻿using Caesar.App.Services;
+﻿using Caesar.App.Interfaces;
 using Caesar.Core.DTOs;
 using System.Diagnostics;
 using System.Windows.Input;

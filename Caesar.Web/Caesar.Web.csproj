@@ -24,4 +24,8 @@
     <_ContentIncludedByDefault Remove="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Intrefaces\" />
+  </ItemGroup>
+
 </Project>
