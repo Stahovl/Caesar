@@ -1,6 +1,8 @@
-﻿namespace Caesar.Web.Services;
+﻿using Caesar.Web.Intrefaces;
 
-public class TokenService
+namespace Caesar.Web.Services;
+
+public class TokenService : ITokenService
 {
     private const string TokenKey = "AuthToken";
     private readonly IHttpContextAccessor _httpContextAccessor;

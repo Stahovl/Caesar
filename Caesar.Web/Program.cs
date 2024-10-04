@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Caesar.Web.Validators;
+using Caesar.Web.Intrefaces;
+using Caesar.Web.Services;
 
 namespace Caesar.Web;
 
@@ -28,10 +30,10 @@ public class Program
         builder.Services.AddScoped<IMenuItemService, MenuItemService>();
         builder.Services.AddScoped<IOrderService, OrderService>();
         builder.Services.AddScoped<IReservationService, ReservationService>();
-
+        builder.Services.AddScoped<ITokenService, TokenService>();
 
         // Register HttpClient
-        builder.Services.AddHttpClient();
+        builder.Services.AddHttpClient<IApiService, ApiService>();
 
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

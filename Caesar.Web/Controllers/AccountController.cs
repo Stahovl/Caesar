@@ -1,21 +1,18 @@
-﻿using Caesar.Infrastructure.Data;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using Microsoft.EntityFrameworkCore;
-using Caesar.Core.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using Caesar.Web.Models;
+using Caesar.Web.Intrefaces;
 
 namespace Caesar.Web.Controllers;
 
 public class AccountController : Controller
 {
-    private readonly CaesarDbContext _context;
+    private readonly IApiService _apiService;
+    private readonly ITokenService _tokenService;
 
-    public AccountController(CaesarDbContext context)
+    public AccountController(IApiService apiService, ITokenService tokenService)
     {
-        _context = context;
+        _apiService = apiService;
+        _tokenService = tokenService;
     }
 
     [HttpGet]
@@ -29,27 +26,19 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            if (await _context.Users.AnyAsync(u => u.Username == model.Username))
+            var result = await _apiService.RegisterAsync(model);
+            if (result)
             {
-                ModelState.AddModelError("Username", "Username is already taken.");
-                return View(model);
+                // Login after register
+                var loginResult = await _apiService.LoginAsync(model.Username, model.Password);
+                if (loginResult.IsSuccess)
+                {
+                    await _tokenService.SetTokenAsync(loginResult.Token);
+                    return RedirectToAction("Index", "Menu");
+                }
             }
-
-            var user = new User
-            {
-                Username = model.Username,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
-                Role = "Customer"
-            };
-
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            await LoginUser(user);
-
-            return RedirectToAction("Index", "Menu");
+            ModelState.AddModelError("", "Registration failed. Please try again.");
         }
-
         return View(model);
     }
 
@@ -64,45 +53,20 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == model.Username);
-
-            if (user != null && BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
+            var result = await _apiService.LoginAsync(model.Username, model.Password);
+            if (result.IsSuccess)
             {
-                await LoginUser(user);
+                await _tokenService.SetTokenAsync(result.Token);
                 return RedirectToAction("Cart", "Menu");
             }
-
             ModelState.AddModelError("", "Invalid username or password");
         }
-
         return View(model);
     }
 
     public async Task<IActionResult> Logout()
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        await _tokenService.ClearTokenAsync();
         return RedirectToAction("Index", "Menu");
-    }
-
-    private async Task LoginUser(User user)
-    {
-        var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, user.Username),
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Role, user.Role)
-        };
-
-        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-        var authProperties = new AuthenticationProperties
-        {
-            IsPersistent = true,
-            ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7)
-        };
-
-        await HttpContext.SignInAsync(
-            CookieAuthenticationDefaults.AuthenticationScheme,
-            new ClaimsPrincipal(claimsIdentity),
-            authProperties);
     }
 }
