@@ -47,6 +47,7 @@ public class OrderService : IOrderService
             {
                 Id = item.Id,
                 MenuItemId = item.MenuItemId,
+                MenuItemName = item.MenuItem.Name,
                 Quantity = item.Quantity,
                 Price = item.Price 
             }).ToList(),

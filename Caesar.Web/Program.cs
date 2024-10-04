@@ -30,6 +30,9 @@ public class Program
         builder.Services.AddScoped<IReservationService, ReservationService>();
 
 
+        // Register HttpClient
+        builder.Services.AddHttpClient();
+
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

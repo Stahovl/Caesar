@@ -113,9 +113,9 @@ public class ReservationRepository : IReservationRepository
         }
 
         var bookedSlots = await _context.Reservations
-            .Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate)
-            .Select(r => r.ReservationDate.Add(r.ReservationTime))
-            .ToListAsync();
+              .Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate)
+              .Select(r => r.ReservationDate.Add(TimeSpan.Parse(r.ReservationTime)))
+              .ToListAsync();
 
         return allPossibleSlots.Except(bookedSlots);
     }

@@ -1,14 +1,12 @@
-﻿@model IEnumerable<Caesar.Core.Entities.Reservation>
+﻿@model IEnumerable<Caesar.Core.DTOs.ReservationDto>
 
 @{
     ViewData["Title"] = "My Reservations";
 }
 
-<h1>My Reservations</h1>
+<h1>History</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New Reservation</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -23,11 +21,10 @@
         {
             <tr>
                 <td>@item.ReservationDate.ToShortDateString()</td>
-                <td>@item.ReservationTime.ToString(@"hh\:mm")</td>
+                <td>@item.ReservationTime</td>
                 <td>@item.NumberOfGuests</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Cancel</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-warning">View</a>
                 </td>
             </tr>
         }

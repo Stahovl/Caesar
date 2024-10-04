@@ -8,13 +8,15 @@ namespace Caesar.Core.Services;
 public class ReservationService : IReservationService
 {
     private readonly IReservationRepository _repository;
+    private readonly IOrderService _orderService;
 
-    public ReservationService(IReservationRepository repository)
+    public ReservationService(IReservationRepository repository, IOrderService orderService)
     {
         _repository = repository;
+        _orderService = orderService;
     }
 
-    public async Task<ReservationDto> CreateReservationAsync(ReservationDto reservationDto)
+    public async Task<ReservationDto> CreateReservationAsync(ReservationDto reservationDto, List<int> menuItemIds)
     {
         var reservation = new Reservation
         {
@@ -23,7 +25,11 @@ public class ReservationService : IReservationService
             ReservationTime = reservationDto.ReservationTime,
             NumberOfGuests = reservationDto.NumberOfGuests
         };
+
         var createdReservation = await _repository.AddAsync(reservation);
+
+        var order = await _orderService.CreateOrderForReservationAsync(createdReservation.Id, menuItemIds);
+
         return MapToDto(createdReservation);
     }
 

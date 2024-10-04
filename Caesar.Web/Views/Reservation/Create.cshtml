@@ -2,12 +2,13 @@
 @{
     ViewData["Title"] = "Create Reservation";
 }
-
+@if (Model.AvailableSlots.Any() && Model.AvailableSlots.First().GetType() != typeof(DateTime))
+{
+    <p class="text-danger">Warning: AvailableSlots contains non-DateTime objects</p>
+}
 <h1>Create Reservation</h1>
-
 <form asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
     <!-- Show date -->
     <div class="form-group">
         <label asp-for="SelectedDate" class="control-label">Date</label>
@@ -19,27 +20,23 @@
         </select>
         <span asp-validation-for="SelectedDate" class="text-danger"></span>
     </div>
-
     <!-- Time for every date -->
     <div class="form-group">
         <label asp-for="SelectedTime" class="control-label">Time</label>
         <select asp-for="SelectedTime" class="form-control">
-            @foreach (var time in Model.AvailableSlots.Select(slot => slot.TimeOfDay).Distinct())
+            @foreach (var time in Model.AvailableSlots.Select(slot => slot.TimeOfDay).Distinct().OrderBy(t => t))
             {
-                <option value="@time.ToString(@"hh\:mm")">@time.ToString(@"hh\:mm")</option>
+                <option value="@time.ToString("hh\\:mm")">@time</option>
             }
         </select>
         <span asp-validation-for="SelectedTime" class="text-danger"></span>
     </div>
-
-
     <!-- Guest count -->
     <div class="form-group">
         <label asp-for="NumberOfGuests" class="control-label">Number of Guests</label>
         <input asp-for="NumberOfGuests" class="form-control" />
         <span asp-validation-for="NumberOfGuests" class="text-danger"></span>
     </div>
-
     @if (Model.CartItems.Any())
     {
         <h3>Selected Menu Items</h3>
@@ -50,12 +47,24 @@
             }
         </ul>
     }
+    <!-- Hidden fields for CartItems -->
+    @foreach (var item in Model.CartItems)
+    {
+        <input type="hidden" name="CartItems[@item.Id].Id" value="@item.Id" />
+        <input type="hidden" name="CartItems[@item.Id].Name" value="@item.Name" />
+        <input type="hidden" name="CartItems[@item.Id].Price" value="@item.Price" />
+    }
 
+    <!-- Hidden fields for AvailableSlots -->
+    @foreach (var slot in Model.AvailableSlots)
+    {
+        <input type="hidden" name="AvailableSlots" value="@slot" />
+    }
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
-</form>
 
+</form>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

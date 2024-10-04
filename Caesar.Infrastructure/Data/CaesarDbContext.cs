@@ -70,14 +70,19 @@ public class CaesarDbContext : DbContext
             .WithOne(oi => oi.Order)
             .HasForeignKey(oi => oi.OrderId);
 
+        modelBuilder.Entity<Order>()
+            .Property(o => o.TotalPrice)
+            .HasColumnType("decimal(18,2)");
+
         modelBuilder.Entity<OrderItem>()
             .HasOne(oi => oi.MenuItem)
             .WithMany()
             .HasForeignKey(oi => oi.MenuItemId);
 
-        modelBuilder.Entity<Order>()
-            .Property(o => o.TotalPrice)
+        modelBuilder.Entity<OrderItem>()
+            .Property(oi => oi.Price)
             .HasColumnType("decimal(18,2)");
+
 
         modelBuilder.Entity<User>().HasData(
             new User

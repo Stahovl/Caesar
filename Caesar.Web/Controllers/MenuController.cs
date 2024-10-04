@@ -74,4 +74,9 @@ public class MenuController : Controller
     {
         return RedirectToAction("Create", "Reservation");
     }
+
+    private List<int> GetMenuItemIdsFromCart()
+    {
+        return HttpContext.Session.Get<List<int>>("Cart") ?? new List<int>();
+    }
 }

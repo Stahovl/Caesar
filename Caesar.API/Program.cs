@@ -57,6 +57,7 @@ public class Program
 
         // Register services
         builder.Services.AddScoped<IReservationService, ReservationService>();
+        builder.Services.AddScoped<IOrderService, OrderService>();
         builder.Services.AddScoped<IMenuItemService, MenuItemService>();
         builder.Services.AddScoped<IAuthService, AuthService>();
 
