@@ -1,4 +1,4 @@
-﻿namespace Caesar.App.Models;
+﻿namespace Caesar.Core.SharedModels;
 
 public class LoginResult
 {

@@ -1,9 +1,9 @@
 ﻿using System.Net.Http.Json;
 using System.Net.Http.Headers;
 using Caesar.Core.DTOs;
-using Caesar.App.Models;
 using System.Diagnostics;
 using Caesar.App.Interfaces;
+using Caesar.Core.SharedModels;
 
 namespace Caesar.App.Services;
 
