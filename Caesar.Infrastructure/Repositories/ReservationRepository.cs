@@ -81,7 +81,7 @@ public class ReservationRepository : IReservationRepository
     /// </summary>
     /// <param name="userId">The ID of the user.</param>
     /// <returns>A list of Reservation entities for the specified user.</returns>
-    public async Task<IEnumerable<Reservation>> GetByUserIdAsync(string userId)
+    public async Task<IEnumerable<Reservation>> GetByUserIdAsync(int userId)
     {
         return await _context.Reservations
             .Where(r => r.UserId == userId)

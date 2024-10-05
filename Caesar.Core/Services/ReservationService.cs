@@ -50,7 +50,7 @@ public class ReservationService : IReservationService
         return reservation != null ? MapToDto(reservation) : null;
     }
 
-    public async Task<IEnumerable<ReservationDto>> GetReservationsByUserIdAsync(string userId)
+    public async Task<IEnumerable<ReservationDto>> GetReservationsByUserIdAsync(int userId)
     {
         var reservations = await _repository.GetByUserIdAsync(userId);
         return reservations.Select(MapToDto);

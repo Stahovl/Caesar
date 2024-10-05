@@ -1,4 +1,5 @@
 ﻿using Caesar.Core.DTOs;
+using Caesar.Core.Entities;
 using Caesar.Core.Interfaces;
 using Caesar.Web.Extensions;
 using Caesar.Web.Models;
@@ -31,7 +32,18 @@ public class ReservationController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        Console.WriteLine($"Index after login start");
+        var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            ModelState.AddModelError("", "User id error. Please log in again.");
+
+            return RedirectToAction("Login", "Account");
+        }
+
+        Console.WriteLine($"User id : {userId}");
+
         var reservations = await _reservationService.GetReservationsByUserIdAsync(userId);
         return View(reservations);
     }
@@ -83,16 +95,21 @@ public class ReservationController : Controller
 
             viewModel.CartItems = await _menuItemService
                 .GetMenuItemsByIdsAsync(HttpContext.Session.Get<List<int>>("Cart") ?? new List<int>());
-           
+
             return View(viewModel);
         }
 
         if (ModelState.IsValid)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            {
+                ModelState.AddModelError("", "User is not authenticated. Please log in again.");
+                return RedirectToAction("Login", "Account");
+            }
+
             var cart = HttpContext.Session.Get<List<int>>("Cart") ?? new List<int>();
 
-            // Create object to send to API
             var request = new
             {
                 reservationDto = new ReservationDto
@@ -112,7 +129,7 @@ public class ReservationController : Controller
                 // Convert object to JSON
                 Console.WriteLine("Start convert request to json");
                 var json = JsonConvert.SerializeObject(request);
-                Console.WriteLine("get content from json"+json);
+                Console.WriteLine("get content from json" + json);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 // Send POST request to API
@@ -151,9 +168,9 @@ public class ReservationController : Controller
         // Show form again if ModelState is invalid or if there's an error
         viewModel.AvailableSlots = (await _reservationService.GetAvailableSlotsAsync(DateTime.Today, DateTime.Today.AddDays(14))).ToList();
         viewModel.CartItems = await _menuItemService.GetMenuItemsByIdsAsync(HttpContext.Session.Get<List<int>>("Cart") ?? new List<int>());
-       
+
         Console.WriteLine("Viewmodel selected time before return = " + viewModel.SelectedTime);
-        
+
         return View(viewModel);
     }
 

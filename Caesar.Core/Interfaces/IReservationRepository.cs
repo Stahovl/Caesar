@@ -6,7 +6,7 @@ public interface IReservationRepository
 {
     public Task<Reservation> GetByIdAsync(int id);
     public Task<IEnumerable<Reservation>> GetAllAsync();
-    public Task<IEnumerable<Reservation>> GetByUserIdAsync(string userId);
+    public Task<IEnumerable<Reservation>> GetByUserIdAsync(int userId);
     public Task<Reservation> AddAsync(Reservation reservation);
     public Task UpdateAsync(Reservation reservation);
     public Task DeleteAsync(int id);

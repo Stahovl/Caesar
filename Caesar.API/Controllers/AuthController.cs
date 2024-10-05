@@ -21,16 +21,14 @@ public class AuthController: ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginModel model)
     {
         _logger.LogInformation($"Login attempt for user: {model.Username}");
-
         try
         {
             var result = await _authService.LoginAsync(model.Username, model.Password);
             if (result.IsSuccess)
             {
                 _logger.LogInformation($"Login successful for user: {model.Username}");
-                return Ok(new { token = result.Token });
+                return Ok(new { token = result.Token, userId = result.UserId });
             }
-
             _logger.LogWarning($"Login failed for user: {model.Username}");
             return Unauthorized(new { message = "Invalid username or password" });
         }

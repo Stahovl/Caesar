@@ -21,17 +21,17 @@ public class AuthService : IAuthService
         _context = context;
     }
 
-    public async Task<(bool IsSuccess, string Token)> LoginAsync(string username, string password)
+    public async Task<(bool IsSuccess, string Token, int UserId)> LoginAsync(string username, string password)
     {
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
 
         if (user == null || !VerifyPasswordHash(password, user.PasswordHash))
         {
-            return (false, null);
+            return (false, null, 0);
         }
 
         var token = GenerateJwtToken(user);
-        return (true, token);
+        return (true, token, user.Id);
     }
 
     public string GenerateJwtToken(User user)

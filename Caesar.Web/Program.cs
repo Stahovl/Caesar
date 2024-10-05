@@ -34,6 +34,7 @@ public class Program
 
         // Register HttpClient
         builder.Services.AddHttpClient<IApiService, ApiService>();
+       // builder.Services.AddHttpContextAccessor();
 
         builder.Services.AddDbContext<CaesarDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

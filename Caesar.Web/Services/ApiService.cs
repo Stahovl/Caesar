@@ -38,17 +38,20 @@ public class ApiService : IApiService
         try
         {
             var response = await _httpClient.PostAsJsonAsync($"{_baseUrl}auth/login", new { Username = username, Password = password });
-
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<LoginResult>();
                 if (result != null && !string.IsNullOrEmpty(result.Token))
                 {
                     await _tokenService.SetTokenAsync(result.Token);
-                    return new LoginResult { IsSuccess = true, Token = result.Token };
+                    return new LoginResult
+                    {
+                        IsSuccess = true,
+                        Token = result.Token,
+                        UserId = result.UserId
+                    };
                 }
             }
-
             return new LoginResult { IsSuccess = false, ErrorMessage = "Invalid username or password" };
         }
         catch (Exception ex)

@@ -4,6 +4,7 @@ using Caesar.Web.Intrefaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using Caesar.Core.Entities;
 
 namespace Caesar.Web.Controllers;
 
@@ -54,31 +55,32 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginViewModel model)
     {
+        Console.WriteLine("Start login");
         if (ModelState.IsValid)
         {
             var result = await _apiService.LoginAsync(model.Username, model.Password);
+            Console.WriteLine("Result is " + result.UserId);
             if (result.IsSuccess)
             {
                 await _tokenService.SetTokenAsync(result.Token);
 
-                // Create the authentication cookie
+                var userId = result.UserId;
+                Console.WriteLine("User id in Login after sign : "+userId);
                 var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, model.Username),
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
             };
-
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var authProperties = new AuthenticationProperties
                 {
                     IsPersistent = true,
                     ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1)
                 };
-
                 await HttpContext.SignInAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsIdentity),
                     authProperties);
-
                 return RedirectToAction("Cart", "Menu");
             }
             ModelState.AddModelError("", "Invalid username or password");

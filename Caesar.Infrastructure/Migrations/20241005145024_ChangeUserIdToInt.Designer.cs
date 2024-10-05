@@ -4,6 +4,7 @@ using Caesar.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Caesar.Infrastructure.Migrations
 {
     [DbContext(typeof(CaesarDbContext))]
-    partial class CaesarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241005145024_ChangeUserIdToInt")]
+    partial class ChangeUserIdToInt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -156,7 +159,7 @@ namespace Caesar.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            PasswordHash = "$2a$11$8QLY4bKo.ta6b3zDDxQi2.mhhkDbEJKtHAYBNzhZgeneI901ngshS",
+                            PasswordHash = "$2a$11$ytj5h0isn52VvvVEpH7TPOBBcn9sLtcY.fv3l1oPyuLYp6PkDKJKK",
                             Role = "Admin",
                             Username = "admin"
                         });
