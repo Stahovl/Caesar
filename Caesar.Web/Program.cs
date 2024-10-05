@@ -42,6 +42,7 @@ public class Program
             .AddCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
+                options.LoginPath = "/Account/Logout";
                 options.AccessDeniedPath = "/Account/AccessDenied";
             });
 
@@ -73,10 +74,9 @@ public class Program
         app.UseStaticFiles();
         app.UseRouting();
 
+        app.UseSession();
         app.UseAuthentication();
         app.UseAuthorization();
-
-        app.UseSession();
 
         app.MapControllerRoute(
             name: "default",

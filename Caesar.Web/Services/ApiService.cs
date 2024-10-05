@@ -27,6 +27,10 @@ public class ApiService : IApiService
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
+        else
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = null;
+        }
     }
 
     public async Task<LoginResult> LoginAsync(string username, string password)

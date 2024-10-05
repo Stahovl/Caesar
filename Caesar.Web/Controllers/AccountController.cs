@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Caesar.Web.Models;
 using Caesar.Web.Intrefaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 
 namespace Caesar.Web.Controllers;
 
@@ -57,6 +60,25 @@ public class AccountController : Controller
             if (result.IsSuccess)
             {
                 await _tokenService.SetTokenAsync(result.Token);
+
+                // Create the authentication cookie
+                var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, model.Username),
+            };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = true,
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1)
+                };
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
                 return RedirectToAction("Cart", "Menu");
             }
             ModelState.AddModelError("", "Invalid username or password");
@@ -66,7 +88,10 @@ public class AccountController : Controller
 
     public async Task<IActionResult> Logout()
     {
+        Console.WriteLine("Logout start");
         await _tokenService.ClearTokenAsync();
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        HttpContext.Session.Clear();
         return RedirectToAction("Index", "Menu");
     }
 }

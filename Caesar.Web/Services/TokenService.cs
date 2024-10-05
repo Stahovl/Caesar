@@ -1,4 +1,6 @@
 ﻿using Caesar.Web.Intrefaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Caesar.Web.Services;
 
@@ -24,6 +26,9 @@ public class TokenService : ITokenService
 
     public async Task ClearTokenAsync()
     {
+        Console.WriteLine("Clear token start, key = " + TokenKey);
         _httpContextAccessor.HttpContext.Session.Remove(TokenKey);
+        await _httpContextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        Console.WriteLine("Clear token end");
     }
 }

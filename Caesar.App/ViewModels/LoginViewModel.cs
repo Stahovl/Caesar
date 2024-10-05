@@ -51,10 +51,11 @@ public class LoginViewModel : BaseViewModel
         try
         {
             var result = await _apiService.LoginAsync(Username, Password);
+
             if (result.IsSuccess)
             {
                 await _tokenService.SetTokenAsync(result.Token);
-                Debug.WriteLine($"Token saved: {result.Token.Substring(0, 10)}..."); // Логируем только часть токена для безопасности
+                Debug.WriteLine($"Token saved: {result.Token.Substring(0, 10)}...");
                 await Shell.Current.GoToAsync("//MainPage");
             }
             else
