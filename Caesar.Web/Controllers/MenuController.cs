@@ -36,7 +36,7 @@ public class MenuController : Controller
         var cart = HttpContext.Session.Get<List<int>>("Cart") ?? new List<int>();
         cart.Add(itemId);
         HttpContext.Session.Set("Cart", cart);
-        return RedirectToAction("Cart");
+        return Ok();
     }
 
     [HttpPost]

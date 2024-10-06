@@ -28,9 +28,9 @@
                     Подробнее
                 </button>
 
-                <form asp-action="AddToCart" method="post" class="d-inline">
+                <form class="add-to-cart-form d-inline" data-item-id="@item.Id">
                     <input type="hidden" name="itemId" value="@item.Id" />
-                    <button type="submit" class="btn btn-primary">Add to cart</button>
+                    <button type="button" class="btn btn-primary add-to-cart-btn">Add to cart</button>
                 </form>
             </div>
 
@@ -38,5 +38,24 @@
             @await Html.PartialAsync("_ItemDetailsModal", item)
         }
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.add-to-cart-btn').click(function () {
+            var itemId = $(this).closest('.add-to-cart-form').data('item-id');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddToCart", "Menu")',
+                data: { itemId: itemId },
+                success: function () {
+                    alert("Item added to cart successfully!");
+                },
+                error: function () {
+                    alert("Error adding item to cart.");
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

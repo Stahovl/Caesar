@@ -24,3 +24,14 @@
     height: 200px;
     object-fit: cover;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.button-container form {
+    display: inline-block;
+}
