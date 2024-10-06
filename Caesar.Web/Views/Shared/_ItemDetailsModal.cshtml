@@ -1,0 +1,23 @@
+﻿@model Caesar.Web.Models.MenuItemViewModel
+
+<div class="modal fade" id="itemDetailsModal-@Model.Id" tabindex="-1" role="dialog" aria-labelledby="itemDetailsModalLabel-@Model.Id" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="itemDetailsModalLabel-@Model.Id">@Model.Name</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid mb-3" />
+                <p>@Model.Description</p>
+                <p>Цена: @Model.Price.ToString("C")</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <form asp-action="AddToCart" method="post">
+                    <input type="hidden" name="itemId" value="@Model.Id" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -68,14 +68,14 @@ public class ReservationController : Controller
         }
         catch (Exception ex)
         {
-            // Логирование ошибки
+
             Console.WriteLine($"Error in Create method: {ex.Message}");
-            // Можно также добавить внутренние исключения
+
             if (ex.InnerException != null)
             {
                 Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
             }
-            // Возвращаем ошибку или перенаправляем на страницу ошибки
+
             return View("Error");
         }
     }
@@ -161,7 +161,6 @@ public class ReservationController : Controller
             {
                 ModelState.AddModelError("", "An error occurred while creating the reservation. Please try again.");
                 Console.WriteLine("Error " + ex.Message);
-                // Log error if necessary
             }
         }
 

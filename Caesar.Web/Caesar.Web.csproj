@@ -21,7 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\_ItemDetailsModal.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\_ItemDetailsModal.cshtml" />
   </ItemGroup>
 
 </Project>

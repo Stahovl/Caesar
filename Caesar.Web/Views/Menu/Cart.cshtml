@@ -1,27 +1,50 @@
 ﻿@model IEnumerable<Caesar.Web.Models.MenuItemViewModel>
 
-<h1>Your Cart</h1>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <title>Cart</title>
 
-@if (Model.Any())
-{
-    <ul>
-        @foreach (var item in Model)
-        {
-            <li>
-                <img src="@item.ImageUrl" alt="@item.Name" width="50" height="50" />
-                <strong>@item.Name</strong> - @item.Price.ToString("C")
-            </li>
-        }
-    </ul>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Your Cart</h1>
 
-    <form asp-action="Checkout" method="post">
-        <button type="submit" class="btn btn-success">Proceed to Checkout</button>
-    </form>
-    <form asp-action="ClearCart" method="post">
-        <button type="submit" class="btn btn-danger">Clear</button>
-    </form>
-}
-else
-{
+    @if (Model.Any())
+    {
+
+        <ul>
+            <div class="menu-items">
+                @foreach (var item in Model)
+                {
+                    <div class="menu-item">
+                        <img src="@item.ImageUrl" alt="@item.Name" class="menu-item-image" />
+                        <h3>@item.Name</h3>
+                        <p>@item.Description</p>
+                        <p>Цена: @item.Price.ToString("C")</p>
+
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemDetailsModal-@item.Id">
+                            Подробнее
+                        </button>
+                    </div>
+
+
+                    @await Html.PartialAsync("_ItemDetailsModal", item)
+                }
+            </div>
+        </ul>
+
+        <form asp-action="Checkout" method="post">
+            <button type="submit" class="btn btn-success">Proceed to Checkout</button>
+        </form>
+        <form asp-action="ClearCart" method="post">
+            <button type="submit" class="btn btn-danger">Clear</button>
+        </form>
+    }
+    else
+    {
     <p>Your cart is empty.</p>
-}
+    }
+</body>
