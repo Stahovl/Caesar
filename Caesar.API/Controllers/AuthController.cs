@@ -1,4 +1,5 @@
-﻿using Caesar.Core.Entities;
+﻿using Caesar.API.Models;
+using Caesar.Core.Entities;
 using Caesar.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,9 +41,4 @@ public class AuthController: ControllerBase
     }
 }
 
-public class LoginModel
-{
-    public string Username { get; set; }
-    public string Password { get; set; }
-}
 
